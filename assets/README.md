@@ -1,1 +1,1 @@
-`assets directory`
+`assets directory`![](/assets/i2-logo.png)
