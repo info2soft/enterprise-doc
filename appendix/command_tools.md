@@ -24,7 +24,7 @@ repset -A &quot;diagtraffic&quot; -f &quot;C:\\data2\\&quot; -f &quot;C:\\data3\
 
 Linux系统：
 
-#repset -A &quot;diagtraffic&quot; -f &quot;/home/data2/&quot; -f &quot;/home/data3/test.mdf&quot; -f &quot;/home/java/&quot; –i
+\#repset -A &quot;diagtraffic&quot; -f &quot;/home/data2/&quot; -f &quot;/home/data3/test.mdf&quot; -f &quot;/home/java/&quot; –i
 
 1.  查看变化的数据量：
 
@@ -62,7 +62,7 @@ repset -D &quot;diagtraffic&quot;
 
 Linux系统
 
-#repset -D &quot;diagtraffic&quot;
+\#repset -D &quot;diagtraffic&quot;
 
 通常，我们推荐选择具有典型业务或者业务量较大的一天，运行数据变化量诊断工具，得到数据变化总量和平均变化量。平均变化量代表传输这些变化的数据所需要的最小带宽。当然，系统在传输这些数据的时候有一些额外的开销，以及考虑到实际的数据变化可能存在一些波动，实际需要的带宽应该比这个更高。如果下是我们推荐的带宽计算公式：
 
