@@ -1,0 +1,15 @@
+{
+    "variables": {
+        "title": "i2灾备软件用户使用手册",
+        "theme": "theme-green",
+        "copyright": "Copyright 2016 www.info2soft.com"
+    },
+    "collapsible_menu":true,
+    "level_number":false,
+    "links": {
+		"sidebar" : {
+            "英方官网" : "http://www.info2soft.com/"
+        },
+        "gitbook": false
+    }
+}
