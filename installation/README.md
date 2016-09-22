@@ -55,3 +55,8 @@ I2控制机安装平台支持的是： RHEL5和6系列、CentOS的5和6系列，
 | info2soft-ctrlcenter-6.0-xxxx.el6.x86_64.rpm | RHEL6、CentOS6以上系列 64位 |
 
 注意：所有模块的安装必须在Linux/Unix root用户、Windows administrator用户或具有相关超级权限的用户下进行。
+
+ * [节点(i2Node)安装](node_install.md)
+ * [控制机(i2CtrlCenter)安装](ctrl_install.md)
+ * [软件卸载](soft_uninstall.md)
+
