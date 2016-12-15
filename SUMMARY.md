@@ -46,6 +46,6 @@
 * [日志管理](others/log_management.md)
 * [技术支持](others/technical_support.md)
 * [附录](appendix/README.md)
-    * [常见错误排查](troubleshooting.md)
+    * [常见错误排查](appendix/troubleshooting.md)
     * [英方软件错误代码说明](appendix/error_code.md)
     * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
