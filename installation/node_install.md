@@ -52,7 +52,7 @@
 
 * 点击“开始-&gt;运行”，输入regedt32打开注册表（也可在dos窗口中运行regedt32打开注册表）
 
-*  打开“HKEY\_LOCAL\_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA”，在SDATA项下新建DWORD\(32-位\)值（D），名称为runasapp，类型为REG\_SZ，数据值为1，如下：
+* 打开“HKEY\_LOCAL\_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA”，在SDATA项下新建DWORD\(32-位\)值（D），名称为runasapp，类型为REG\_SZ，数据值为1，如下：
 
 ![](/assets/V6.011683.png)
 
@@ -118,19 +118,19 @@
 
 打开终端或者是Xshell/putty连接到Linux服务器，按如下命令行的方式进行。
 
-![](/assets/V6.013154.png)
+![](/assets/V6.113343.png)
 
 安装过程中提示选择Enterprise版还是Cloud Client版，请输入“1”，选择Enterprise版，然后回车
 
 安装完成后提示设置i2port，该端口用于工作机模块与控制机模块通讯使用的端口（范围1024~65535，默认是26821），用户可自行修改；
 
-![](/assets/V6.013290.png)
+![](/assets/V6.113505.png)
 
 可以通过查看相关进程来确认i2node安装是否成功，
 
-![](/assets/V6.013319.png)
+![](/assets/V6.113534.png)
 
 启动和停止服务：
 
-![](/assets/V6.013330.png)
+![](/assets/V6.113545.png)
 
