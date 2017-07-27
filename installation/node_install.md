@@ -48,15 +48,17 @@
 
 **2）修改配置使I2程序以应用方式运行**
 
-点击“开始-&gt;运行”，输入regedt32打开注册表（也可在dos窗口中运行regedt32打开注册表）
+1）修改注册表
 
-1）修改注册表项目“HKEY\_LOCAL\_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA-&gt;runasapp”的值为1
+* 点击“开始-&gt;运行”，输入regedt32打开注册表（也可在dos窗口中运行regedt32打开注册表）
+
+*  打开“HKEY\_LOCAL\_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA”，在SDATA项下新建DWORD\(32-位\)值（D），名称为runasapp，类型为REG\_SZ，数据值为1，如下：
 
 ![](/assets/V6.011683.png)
 
 2）关闭并重新启动桌面上的的监控程序（Smon）（启动时间通常不超过20秒），启动之后打开Smon，可看到如下画面，红色框的部分显示I2程序正以应用程序方式运行
 
-![](/assets/V6.011767.png)
+![](/assets/v6.111765.png)
 
 这时，I2相关的系统服务如下：
 
@@ -72,7 +74,7 @@
 
 关闭并重新启动Smon
 
-![](/assets/V6.012109.png)
+![](/assets/v6.11766.png)
 
 注意事项：
 
