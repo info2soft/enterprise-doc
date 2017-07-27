@@ -16,34 +16,33 @@
 
 ![](/assets/V6.010898.png)
 
-输入用户名和公司名称
-
-![](/assets/V6.010912.png)
-
 安装类型选择“企业版”；
 
 ![](/assets/V6.010928.png)
 
 选择全部则按程序默认方式安装，选择“定制”可自定义安装目录
 
-![](/assets/V6.010961.png)
+![](/assets/v6.110959.png)
 
 ![](/assets/V6.010964.png)
 
+![](/assets/v6.110962.png)
+
 安装完成后在桌面右下角点击服务管理图标确认复制服务、RPC服务、日志服务处于运行状态，并确认版本号信息
 
-![](/assets/V6.011019.png)
+![](/assets/v6.110963.png)
 
-也可以通过任务管理器查看sdatad.exe、rpcserver.exe、sdatalogd.exe、Srepd.exe、sdatabaklogd.exe、i2Availability.exe这些进程是否开启。进程描述如下：
+也可以通过任务管理器查看sdatad.exe、rpcserver.exe、sdatalogd.exe、Srepd.exe、i2Availability.exe这些进程是否开启。进程描述如下：
 
 | 服务名称 | 所属模块 | 说明 |
 | --- | --- | --- |
 | i2-Availability | 共用 | 高可用功能模块 |
-| i2-rpc | | 工作机\灾备机与控制机RPC的通讯模块 |
+| i2-rpc |  | 工作机/灾备机与控制机RPC的通讯模块 |
+| i2-Slogd |  | 工作机/灾备机日志模块 |
 | i2-Sdatad | 工作机 | 工作机与灾备机Srepd的通讯模块 |
-| i2-Slogd | | 工作机日志模块，并将日志送给控制机 |
+|  |  |  |
 | i2-Srepd | 灾备机 | 灾备机与工作机Sdatad的通讯模块 |
-| i2-Slogdbk | | 灾备机日志模块，并将日志送给控制机 |
+|  |  |  |
 
 注意：如果存在其他版本的I2灾备软件，必须先卸载原有的版本再安装；
 
@@ -51,7 +50,7 @@
 
 点击“开始-&gt;运行”，输入regedt32打开注册表（也可在dos窗口中运行regedt32打开注册表）
 
-1）修改注册表项目“HKEY_LOCAL_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA-&gt;runasapp”的值为1
+1）修改注册表项目“HKEY\_LOCAL\_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA-&gt;runasapp”的值为1
 
 ![](/assets/V6.011683.png)
 
@@ -67,7 +66,7 @@
 
 **3）修改配置使I2程序以服务方式运行**
 
-1. 将修改注册表项“HKEY_LOCAL_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA-&gt;runasapp”的值修改为0
+1. 将修改注册表项“HKEY\_LOCAL\_MACHINE-&gt;SOFTWARE-&gt;Info2Software-&gt;SDATA-&gt;runasapp”的值修改为0
 
 ![](/assets/V6.012094.png)
 
@@ -77,15 +76,15 @@
 
 注意事项：
 
- （1）当修改运行方式后，必须关闭Smon，再重新运行一下Smon；
+（1）当修改运行方式后，必须关闭Smon，再重新运行一下Smon；
 
- （2）当设置以应用程序方式运行后，重启机器，用户不登录，则I2相关程序不运行；
+（2）当设置以应用程序方式运行后，重启机器，用户不登录，则I2相关程序不运行；
 
- （3）当设置以应用程序方式运行后，重启机器，打开Smon之后，进程是否启动受“保持启动状态”选项的控制，
+（3）当设置以应用程序方式运行后，重启机器，打开Smon之后，进程是否启动受“保持启动状态”选项的控制，
 
- 如果是勾选的：Smon启动后，进程会自动启动；
+如果是勾选的：Smon启动后，进程会自动启动；
 
- 如果不勾选的：Smon启动后，进程不会自动启动；需要用户手工启动；（这个要特别注意）
+如果不勾选的：Smon启动后，进程不会自动启动；需要用户手工启动；（这个要特别注意）
 
 1. 当设置以应用程序方式运行后，进程已经启动，关闭Smon，不会主动关闭I2相关进程；重新打开Smon，由保持启动状态”选项决定是否自动启动相关进程。
 
@@ -93,7 +92,7 @@
 
 以应用方式运行可用来实现windows共享目录的同步，步骤如下，
 
-登录控制机，点击[实用工具]-&gt;[一致性比较]， 添加针对共享目录的比较任务**。**
+登录控制机，点击\[实用工具\]-&gt;\[一致性比较\]， 添加针对共享目录的比较任务**。**
 
 ![](/assets/V6.012112.png)
 
@@ -101,13 +100,13 @@
 
 （1）请【特别注意】，不要添加针对共享目录的复制规则，一旦添加会产生大量错误日志迅速占满磁盘空间。错误日志如下：
 
-2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata_hookuser_recv: The kernel component of sfs has unloaded. Exiting 2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata_hookuser_recv: Port is disconnected, probably due to SFS filter unloading. 2016-01-04 15:12:29 2 8786FA0D-A7C8-BA80-4585-0FD88F96E1EA Cancel mirror , current state -3523
+2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata\_hookuser\_recv: The kernel component of sfs has unloaded. Exiting 2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata\_hookuser\_recv: Port is disconnected, probably due to SFS filter unloading. 2016-01-04 15:12:29 2 8786FA0D-A7C8-BA80-4585-0FD88F96E1EA Cancel mirror , current state -3523
 
 （2）针对本地磁盘的复制规则，可以添加，功能和服务方式运行相同
 
 （3）目前只支持共享映射为盘符的方式，不支持如下直接访问方式，
 
-\\192.168.100.94\ftp-root\temp
+\192.168.100.94\ftp-root\temp
 
 （4）除非需要支持网络共享磁盘，否则不建议使用“以应用程序方式运行”
 
@@ -132,3 +131,4 @@
 启动和停止服务：
 
 ![](/assets/V6.013330.png)
+
