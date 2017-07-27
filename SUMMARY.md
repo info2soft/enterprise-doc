@@ -18,6 +18,7 @@
   * [节点监控](system_management/node_monitor.md)
   * [软件管理](system_management/software_management.md)
   * [系统参数](system_management/sys_settings.md)
+  * [节点在线升级](system_management/upgrade_node.md)
   * [控制机信息导入导出](system_management/cc_backup_restore.md)
 * [数据的备份与恢复](coopy_cdp/README.md)
   * [创建复制规则](coopy_cdp/new_rep.md)
@@ -50,4 +51,6 @@
   * [常见错误排查](appendix/troubleshooting.md)
   * [英方软件错误代码说明](appendix/error_code.md)
   * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
+
+
 
