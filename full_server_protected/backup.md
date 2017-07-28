@@ -21,6 +21,21 @@
 
 ### 镜像设置 {#mirr}
 
+* [复制规则高级属性](coopy_cdp/advance_settings.md)
+
+### 压缩加密 {#comp}
+
+* [复制规则高级属性](coopy_cdp/advance_settings.md)
+
+### 自动备份设置 {#auto}
+
+* [复制规则高级属性](coopy_cdp/advance_settings.md)
+
+### 带宽设置 {#bw}
+
+* [复制规则高级属性](coopy_cdp/advance_settings.md)
+
+
 
 
 点击“提交”后会出现“全服务器备份或还原检查”窗口：
