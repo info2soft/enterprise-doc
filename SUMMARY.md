@@ -36,7 +36,7 @@
   * [全服务器还原](full_server_protected/restore.md)
   * [全服务器迁移](full_server_protected/move.md)
 * [无代理备份（i2vp）](virtual_platform/README.md)
-  * [NpServer安装](virtual_platform/install_npsvr.md)
+  * [NpServer部署](virtual_platform/install_npsvr.md)
   * [虚拟平台注册](virtual_platform/add_vp.md)
   * [备份虚机](virtual_platform/vm_backup.md)
   * [恢复虚机](virtual_platform/vm_restore.md)
@@ -52,6 +52,4 @@
   * [常见错误排查](appendix/troubleshooting.md)
   * [英方软件错误代码说明](appendix/error_code.md)
   * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
-
-
 
