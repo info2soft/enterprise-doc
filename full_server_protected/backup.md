@@ -41,8 +41,6 @@
 
 * [复制规则高级属性](coopy_cdp/advance_settings.md)
 
-
-
 设置完成后，点击“提交”后会出现“全服务器备份或还原检查”窗口：
 
 ![](/assets/V6.031220.png)
@@ -55,39 +53,7 @@
 
 ![](/assets/V6.031281.png)
 
-### VMDK备份操作说明 {#vmdk}
 
-创建全服务器备份规则时，再勾选vmdk之前先要确保在备机进行相应的操作使备机支持vmdk，并且装有Vmware workstation虚拟软件
-
-**Windows备份环境：**
-
-1. .X64环境\(windows 2008及以上版本\)
-2. 创建C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows 文件夹并将相应的windows 模板（\*.vmdk文件）放在该文件夹下
-3. 停止i2node服务，
-4. 把VMDK备份\windows\vddk\5.5目录下的所有文件放到C:\Program Files \(x86\)\info2soft-i2node\bin目录下，点击vstor2install.bat\(最好通过cmd命令执行，这样能看到执行结果是否正常\)，安装驱动，点击verifysslcertificates.reg，添加注册表项。
-
-**注意：**
-
-如果是多个磁盘的vmdk备份，将windows模板（_.vmdk文件）中的Windows Server.vmdk放在C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows目录下，当备份完成后，打开虚拟机前需要将_-1.vmdk、\*-2.vmdk，依次数字序挂载到虚拟机上。
-
-**Linux工作机要求：**
-
-1. 工作机至少包含/ 和/boot两个独立分区
-
-**Linux备机环境：**
-
-1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（\*.vmdk文件）放在该目录下。
-2. 把VMDK备份\linux\vddk\5.5目录下的所有文件放到备机/usr/local/sdata/sbin目录下。
-3. /etc/init.d/i2node 在i2fw函数前增加一行 “export LD\_LIBRARY\_PATH=/usr/local/sdata/sbin/”。
-4. 重启i2node服务，使其生效。
-
-**注意：**
-
-如果工作机分区，除了/boot、 / 、swap 分区之外。还有其他分区，创建vmdk备份规则的时候，可以选择添加该分区，例如home分区（添加分区的步骤:添加-&gt;手动输入/home/,并且要保持格式一致。）；
-
-![](/assets/V6.032223.png)
-
-也可以选择不添加该分区，这样备份时只是把它当成普通的目录处理。当备份完成后，打开虚拟机前需要将_-1.vmdk 、_-2.vmdk等，依照数字次序挂载到虚拟机上。
 
 ### 任务监控和全服务器备份 {#-1}
 
@@ -125,6 +91,40 @@
 综上所述，全服务器迁移任务的状态转换过程如下：
 
 ![](/assets/V6.032659.png)
+
+### VMDK备份操作说明 {#vmdk}
+
+创建全服务器备份规则时，再勾选vmdk之前先要确保在备机进行相应的操作使备机支持vmdk，并且装有Vmware workstation虚拟软件
+
+**Windows备份环境：**
+
+1. .X64环境\(windows 2008及以上版本\)
+2. 创建C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows 文件夹并将相应的windows 模板（\*.vmdk文件）放在该文件夹下
+3. 停止i2node服务，
+4. 把VMDK备份\windows\vddk\5.5目录下的所有文件放到C:\Program Files \(x86\)\info2soft-i2node\bin目录下，点击vstor2install.bat\(最好通过cmd命令执行，这样能看到执行结果是否正常\)，安装驱动，点击verifysslcertificates.reg，添加注册表项。
+
+**注意：**
+
+如果是多个磁盘的vmdk备份，将windows模板（_.vmdk文件）中的Windows Server.vmdk放在C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows目录下，当备份完成后，打开虚拟机前需要将_-1.vmdk、\*-2.vmdk，依次数字序挂载到虚拟机上。
+
+**Linux工作机要求：**
+
+1. 工作机至少包含/ 和/boot两个独立分区
+
+**Linux备机环境：**
+
+1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（\*.vmdk文件）放在该目录下。
+2. 把VMDK备份\linux\vddk\5.5目录下的所有文件放到备机/usr/local/sdata/sbin目录下。
+3. /etc/init.d/i2node 在i2fw函数前增加一行 “export LD\_LIBRARY\_PATH=/usr/local/sdata/sbin/”。
+4. 重启i2node服务，使其生效。
+
+**注意：**
+
+如果工作机分区，除了/boot、 / 、swap 分区之外。还有其他分区，创建vmdk备份规则的时候，可以选择添加该分区，例如home分区（添加分区的步骤:添加-&gt;手动输入/home/,并且要保持格式一致。）；
+
+![](/assets/V6.032223.png)
+
+也可以选择不添加该分区，这样备份时只是把它当成普通的目录处理。当备份完成后，打开虚拟机前需要将_-1.vmdk 、_-2.vmdk等，依照数字次序挂载到虚拟机上。
 
 ### VMDK备份文件使用说明 {#vmdk-0}
 
