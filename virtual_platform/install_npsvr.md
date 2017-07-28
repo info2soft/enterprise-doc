@@ -46,6 +46,22 @@ Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用�
 
 卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
+### Linux {#windows}
+
+支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
+
+rpm安装
+
+![](/assets/V6.140835.png)
+
+安装完成后检查进程及端口；
+
+![](/assets/V6.140851.png)
+
+配置文件目录位置是/etc/npsvr/
+
+日志文件目录位置是/var/i2data/log/
+
 ### 灾备机部署VDDK动态库 {#vddk}
 
 Windows平台下，软件安装完成后，停止软件所有服务，解压缩vddk文件到i2node\bin目录下，有冲突的文件选择覆盖。导入注册表项verifysslcertificates.reg以禁用ssl，启动软件所有服务。
