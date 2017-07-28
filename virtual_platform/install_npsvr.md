@@ -52,21 +52,45 @@ Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用�
 
 rpm安装
 
-![](/assets/V6.140835.png)
+![](/assets/V6.140835.png)
 
 安装完成后检查进程及端口；
 
-![](/assets/V6.140851.png)
+![](/assets/V6.140851.png)
 
 配置文件目录位置是/etc/npsvr/
 
 日志文件目录位置是/var/i2data/log/
 
-### 灾备机部署VDDK动态库 {#vddk}
+### 灾备机部署 {#vddk}
 
-Windows平台下，软件安装完成后，停止软件所有服务，解压缩vddk文件到i2node\bin目录下，有冲突的文件选择覆盖。导入注册表项verifysslcertificates.reg以禁用ssl，启动软件所有服务。
+当虚机快照建立完成以后，灾备机与ESXI平台通信请求读取虚机的磁盘文件，备份传输到本地磁盘上，以VMDK形式保存；
 
-linux平台下，软件安装完成后，停止软件i2node服务，解压vddk.tgz下的\*so文件到/usr/lib/vmware-vix-disklib/目录下，编辑/etc/init.d/i2node，在启动服务进程的代码前面\(比如加在”prog=i2node”的下一行\)加入export LD\_LIBRARY\_PATH=/usr/lib/vmware-vix-disklib/\(可以写成别的路径，但要和前面的路径保持一致\)，启动i2node服务。
+因此灾备机要有足够的磁盘空间，并且加载vddk动态库，i2VP提供独立的i2node安装包集成vddk；
 
-注：提供的vddk只支持64bit，所以备机只能是64位的系统
+源机即VCenter/ESXI端无特殊配置。
+
+* ### Windows {#vddk}
+
+支持的Windows操作系统是Windows Server 2008 64位；
+
+双击安装info2soft-i2node-fori2vp-6.\*.\*\*\*\*\*\(x64\).exe文件；
+
+安装完成以后进入bin目录检查vddk库文件是否存在；
+
+![](/assets/V6.141167.png)
+
+* ### Linux {#vddk}
+
+支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
+
+首先rpm安装i2node（与i2企业版的i2node相同）
+
+![](/assets/V6.141242.png)
+
+然后rpm安装vddk plugins，注意版本对应；
+
+![](/assets/V6.141272.png)
+
+安装完成以后，检查/usr/lib/vmware-vix-disklib/目录；
 
