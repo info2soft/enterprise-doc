@@ -62,9 +62,7 @@ Linux上，脚本的根目录为：/etc/sdata/scripts
 
 **注意：**
 
-脚本在主节点和从节点上必须是同时存在的，并且放在指定的目录下，Windows上，脚本的根目录为：
-
-&lt;i2Soft installation Path&gt;\scripts
+脚本在主节点和从节点上必须是同时存在的，并且放在指定的目录下，Windows上，脚本的根目录为：`i2Soft installation Path`\scripts
 
 Linux上，脚本的根目录为：/etc/sdata/scripts
 
@@ -79,3 +77,9 @@ Linux上，脚本的根目录为：/etc/sdata/scripts
 使用节点仲裁时需要设置一个仲裁ip地址，这个仲裁ip所在的主机需要安装i2节点软件，并且i2Availability进程正常运行，在心跳线全部失效的情况下，要用到仲裁机制来判断谁能接管资源
 
 ![](/assets/V6.030077.png)
+
+提交规则后会提示确认信息，确认HA规则配置是否正确，确认完成后，提交规则
+![](/assets/V6.132510.png)
+
+
+
