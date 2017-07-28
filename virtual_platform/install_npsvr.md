@@ -1,6 +1,14 @@
-## Npserver安装 {#npserver}
+## Npserver部署 {#npserver}
 
-### Windows安装 {#windows}
+NPSVR默认使用端口58083与ESXI的web service通信，以达到控制和信息获取的目的。确保NPSVR所使用的端口可以被防火墙放行。
+
+NPSVR首次运行会生成默认的配置文件，停止NPSVR后可以修改默认配置项。如端口号、日志等级等等。
+
+NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPSVR重启时加载虚拟化平台的注册信息、建立连接并保持，加载备份规则并启动规则信息中标记为非停止和非完成状态的规则。
+
+### Windows {#windows}
+
+支持的Windows操作系统是Windows Server 2008 64位；
 
 双击安装程序包，出现如下界面，点击next：
 
@@ -42,6 +50,7 @@ Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用�
 
 Windows平台下，软件安装完成后，停止软件所有服务，解压缩vddk文件到i2node\bin目录下，有冲突的文件选择覆盖。导入注册表项verifysslcertificates.reg以禁用ssl，启动软件所有服务。
 
-linux平台下，软件安装完成后，停止软件i2node服务，解压vddk.tgz下的*so文件到/usr/lib/vmware-vix-disklib/目录下，编辑/etc/init.d/i2node，在启动服务进程的代码前面(比如加在”prog=i2node”的下一行)加入export LD_LIBRARY_PATH=/usr/lib/vmware-vix-disklib/(可以写成别的路径，但要和前面的路径保持一致)，启动i2node服务。
+linux平台下，软件安装完成后，停止软件i2node服务，解压vddk.tgz下的\*so文件到/usr/lib/vmware-vix-disklib/目录下，编辑/etc/init.d/i2node，在启动服务进程的代码前面\(比如加在”prog=i2node”的下一行\)加入export LD\_LIBRARY\_PATH=/usr/lib/vmware-vix-disklib/\(可以写成别的路径，但要和前面的路径保持一致\)，启动i2node服务。
 
 注：提供的vddk只支持64bit，所以备机只能是64位的系统
+
