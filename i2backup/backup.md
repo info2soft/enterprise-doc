@@ -2,10 +2,10 @@
 
 在“备份管理-&gt;备份-&gt;基本设置”中通过“源类型”和“目标类型”可实现文件-&gt;文件，文件-&gt;raw数据，块设备-&gt;文件，块设备-&gt;raw数据，oracle-&gt;文件，mssql server-&gt;文件的备份
 
-* [文件备份](backup_file.md)
-* [块设备备份](backup_blk.md)
-* [oracle备份](backup_oracle.md)
-* [mssql server备份](backup_mssql.md)
+* [文件备份](i2backup/backup_file.md)
+* [块设备备份](i2backup/backup_blk.md)
+* [oracle备份](i2backup/backup_oracle.md)
+* [mssql server备份](i2backup/backup_mssql.md)
 
 **特别说明：**
 
