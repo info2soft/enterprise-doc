@@ -17,7 +17,7 @@
 
 ##mssql server还原
 
-![说明: 1](/assets/V6.V6.200022.png)
+![说明: 1](/assets/V6.200022.png)
 
 *   “新数据库名称”：还原后的新数据库名称
 *   “新数据库文件存放路径”：还原后的新数据库文件存放路径，也就是mdf和ldf文件的存放路径
@@ -34,11 +34,11 @@
 
 ##oracle还原
 
-![说明: 1](/assets/V6.V6.200023.png)
+![说明: 1](/assets/V6.200023.png)
 
-![说明: 1](/assets/V6.V6.200024.png)
+![说明: 1](/assets/V6.200024.png)
 
-![说明: 1](/assets/V6.V6.200025.png)
+![说明: 1](/assets/V6.200025.png)
 
 *   “Oracle数据库实例名”：于响应Oracle数据库操作的数据库管理系统的名称，可通过环境变量ORACLE_SID查看
 *   “Oracle数据库Home目录”：安装Oracle软件的位置，可通过环境变量ORACLE_HOME查看
