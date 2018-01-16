@@ -1,8 +1,17 @@
 {
+	"title": "i2灾备软件用户使用手册",
+	"description": "英方股份企业版管理控制台用户使用手册",
+	"language" : "zh-hans",
+	"theme": "theme-green",
+	"copyright": "Copyright 2017 www.info2soft.com",
+	"pluginsConfig": {
+        "fontSettings": {
+            "theme": "sepia",
+            "family": "serif",
+            "size": 3
+        }
+    },
     "variables": {
-        "title": "i2灾备软件用户使用手册",
-        "theme": "theme-green",
-        "copyright": "Copyright 2016 www.info2soft.com"
     },
     "collapsible_menu":true,
     "level_number":false,
@@ -11,5 +20,18 @@
             "英方官网" : "http://www.info2soft.com/"
         },
         "gitbook": false
+    },
+    "pdf": {
+        "pageNumbers": false,
+        "fontSize": 14,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 36,
+            "bottom": 36
+        },
+        "headerTemplate": null,
+        "footerTemplate": null
     }
 }
