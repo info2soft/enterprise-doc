@@ -99,3 +99,5 @@ Linux上，脚本的根目录为：/etc/sdata/scripts
 ![说明: 1](/assets/V6.200012.png)
 
 备份策略可添加多条，请根据实际需求来添加
+
+* [返回备份页](backup.md)
