@@ -6,13 +6,9 @@
 
 information2 software products' manual
 
-
-
 ### 上海英方软件股份有限公司
 
 ![](/assets/qrcode2.png)
-
-
 
 # 目录
 
@@ -72,4 +68,6 @@ information2 software products' manual
   * [常见错误排查](appendix/troubleshooting.md)
   * [英方软件错误代码说明](appendix/error_code.md)
   * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
+
+
 
