@@ -7,7 +7,6 @@
 information2 software products' manual
 
 
-
 ####     上海英方软件股份有限公司
 
 ![](/assets/qrcode2.png)
