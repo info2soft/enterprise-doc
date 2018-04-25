@@ -101,13 +101,15 @@
 
 （1）请【特别注意】，不要添加针对共享目录的复制规则，一旦添加会产生大量错误日志迅速占满磁盘空间。错误日志如下：
 
-2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata\_hookuser\_recv: The kernel component of sfs has unloaded. Exiting 2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata\_hookuser\_recv: Port is disconnected, probably due to SFS filter unloading. 2016-01-04 15:12:29 2 8786FA0D-A7C8-BA80-4585-0FD88F96E1EA Cancel mirror , current state -3523
+2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata\_hookuser\_recv: The kernel component of sfs has unloaded. Exiting 
+2016-01-04 15:12:29 0 00000000-0000-0000-0000-000000000000 sdata\_hookuser\_recv: Port is disconnected, probably due to SFS filter unloading. 
+2016-01-04 15:12:29 2 8786FA0D-A7C8-BA80-4585-0FD88F96E1EA Cancel mirror , current state -3523
 
 （2）针对本地磁盘的复制规则，可以添加，功能和服务方式运行相同
 
 （3）目前只支持共享映射为盘符的方式，不支持如下直接访问方式，
 
-\192.168.100.94\ftp-root\temp
+\\\192.168.100.94\ftp-root\temp
 
 （4）除非需要支持网络共享磁盘，否则不建议使用“以应用程序方式运行”
 
