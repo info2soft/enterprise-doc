@@ -112,11 +112,14 @@
 1. 工作机至少包含/ 和/boot两个独立分区
 
 **Linux备机环境：**
-
+**方法一**
 1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（\*.vmdk文件）放在该目录下。
 2. 把VMDK备份\linux\vddk\5.5目录下的所有文件放到备机/usr/local/sdata/sbin目录下。
 3. /etc/init.d/i2node 在i2fw函数前增加一行 “export LD\_LIBRARY\_PATH=/usr/local/sdata/sbin/”。
 4. 重启i2node服务，使其生效。
+
+**方法二**
+
 
 **注意：**
 
