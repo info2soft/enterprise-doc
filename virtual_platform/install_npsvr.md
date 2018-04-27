@@ -62,6 +62,15 @@ rpm安装
 
 日志文件目录位置是/var/i2data/log/
 
+linux卸载
+
+打开终端或使用xshell连接到主机，使用rpm –e命令进行NPSVR的卸载：
+
+[root@localhost /]# rpm -e info2soft-npsvr
+
+**注：**卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
+
+
 ### 灾备机部署 {#vddk}
 
 当虚机快照建立完成以后，灾备机与ESXI平台通信请求读取虚机的磁盘文件，备份传输到本地磁盘上，以VMDK形式保存；
