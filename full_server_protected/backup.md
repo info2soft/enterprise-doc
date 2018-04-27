@@ -28,11 +28,11 @@
 
 ### 镜像设置 {#mirr}
 
-* [复制规则高级属性](coopy_cdp/advance_settings.md)
+* [复制规则高级属性](/coopy_cdp/advance_settings.md)
 
 ### 压缩加密 {#comp}
 
-* [复制规则高级属性](coopy_cdp/advance_settings.md)
+* [复制规则高级属性](/coopy_cdp/advance_settings.md)
 
 ### 自动备份设置 {#auto}
 
