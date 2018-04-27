@@ -141,9 +141,13 @@
 1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（*.vmdk文件）放在该目录下。
 
 2. 打开终端或xshell，进行i2vp_plugin的安装，如下图所示：
+
 ![](/assets/V6.118042624.png)
+
 3. 修改 /etc/sdata/vdl.conf，在第一行的tmpDirectory前加“#”号，目的是将i2vp指定挂载路径注释掉，如下图所示：
+
 ![](/assets/V6.118042701.png)
+
 4. 重启i2node服务，使其生效。
 
 
