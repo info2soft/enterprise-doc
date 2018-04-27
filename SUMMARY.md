@@ -40,6 +40,7 @@
   * [NpServer部署](virtual_platform/install_npsvr.md)
   * [虚拟平台注册](virtual_platform/add_vp.md)
   * [备份虚机](virtual_platform/vm_backup.md)
+  * [迁移虚机](vm_move.md)
   * [恢复虚机](virtual_platform/vm_restore.md)
 * [备份管理（i2Backup）](i2backup/README.md)
   * [备份](i2backup/backup.md)
