@@ -46,7 +46,7 @@
   * [备份](i2backup/backup.md)
   * [还原](i2backup/restore.md)
 * [实用工具（Utilities）](utilities/README.md)
-  * [一致性比较](utilities/consistency_comparison.md)
+  * [比较与同步](utilities/consistency_comparison.md)
   * [诊断](utilities/diagnosis.md)
 * [日志管理](others/log_management.md)
 * [技术支持](others/technical_support.md)
