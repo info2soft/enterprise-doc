@@ -11,21 +11,28 @@
 ![](/assets/V6.030974.png)
 
 * “名称”:客户命名的名称，便于管理；
+
 * “工作机”：指定全服务器备份的主机；
+
 * “灾备机”：指定全服务器备份的备机；
+
 * “同步项”: 用户自定义选择要同步的磁盘，比如：C: ,E:\,F:\;
+
 * “VMDK“：5.6版本暂时不支持；
+
 * “工作机源目录和文件”: 要复制到灾备机的数据（注：不可自定义）；
+
 * “灾备机目标路径“：数据要备份到灾备机上的路径；
+
 * “不要复制的目录和文件”：除了系统定义的之外，用户可以自定义不需要复制的目录和文件。
 
 ### 镜像设置 {#mirr}
 
-* [复制规则高级属性](coopy_cdp/advance_settings.md)
+* [复制规则高级属性](/coopy_cdp/advance_settings.md)
 
 ### 压缩加密 {#comp}
 
-* [复制规则高级属性](coopy_cdp/advance_settings.md)
+* [复制规则高级属性](/coopy_cdp/advance_settings.md)
 
 ### 自动备份设置 {#auto}
 
@@ -33,8 +40,11 @@
 ![](/assets/V6.134447.png)
 
 * “开启自动备份”：开启自动备份
+
 * “间隔时间”：两次备份的间隔时间
+
 * “备份数目”：要备份的数目 
+
 * “备份个数达到上限时策略”：当备份数目达到了用户设定的值以后，选择规则是“自动停止”还是“自动循环”继续备份
 
 ### 带宽设置 {#bw}
@@ -99,8 +109,11 @@
 **Windows备份环境：**
 
 1. .X64环境\(windows 2008及以上版本\)
+
 2. 创建C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows 文件夹并将相应的windows 模板（\*.vmdk文件）放在该文件夹下
+
 3. 停止i2node服务，
+
 4. 把VMDK备份\windows\vddk\5.5目录下的所有文件放到C:\Program Files \(x86\)\info2soft-i2node\bin目录下，点击vstor2install.bat\(最好通过cmd命令执行，这样能看到执行结果是否正常\)，安装驱动，点击verifysslcertificates.reg，添加注册表项。
 
 **注意：**
@@ -113,10 +126,31 @@
 
 **Linux备机环境：**
 
+**方法一**
+
 1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（\*.vmdk文件）放在该目录下。
+
 2. 把VMDK备份\linux\vddk\5.5目录下的所有文件放到备机/usr/local/sdata/sbin目录下。
+
 3. /etc/init.d/i2node 在i2fw函数前增加一行 “export LD\_LIBRARY\_PATH=/usr/local/sdata/sbin/”。
+
 4. 重启i2node服务，使其生效。
+
+**方法二**
+
+1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（*.vmdk文件）放在该目录下。
+
+2. 打开终端或xshell，进行i2vp_plugin的安装，如下图所示：
+
+![](/assets/V6.118042624.png)
+
+3. 修改 /etc/sdata/vdl.conf，在第一行的tmpDirectory前加“#”号，目的是将i2vp指定挂载路径注释掉，如下图所示：
+
+![](/assets/V6.118042701.png)
+
+4. 重启i2node服务，使其生效。
+
+
 
 **注意：**
 
@@ -142,10 +176,11 @@
 
 ![](/assets/V6.032850.png)
 
-1. 点击开启虚拟机
+点击开启虚拟机
 
 ![](/assets/V6.032861.png)  
-2.  打开后你会发现，这就是你备份的那台工作机
+
+打开后你会发现，这就是你备份的那台工作机
 
 ![](/assets/V6.032885.png)
 
