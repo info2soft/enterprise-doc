@@ -2,9 +2,9 @@
 
 # i2灾备软件用户使用手册
 
-### V6.1
+### V6.2
 
-information2 software products' manual
+Information2 Software Enterprise Products Manual
 
 ### 上海英方软件股份有限公司
 
