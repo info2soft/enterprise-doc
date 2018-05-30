@@ -16,7 +16,7 @@ information2 software products' manual
 * [软件概览](introduction/introduction.md)
   * [系统架构](introduction/system_architecture.md)
   * [核心功能](introduction/core_functions.md)
-  * [端口说明](introduction/ports.md)
+  * [通信矩阵及端口说明](introduction/ports.md)
 * [安装和卸载](installation/README.md)
   * [节点\(i2Node\)安装](installation/node_install.md)
   * [控制机\(i2CtrlCenter\)安装](installation/ctrl_install.md)
