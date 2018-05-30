@@ -4,7 +4,7 @@
 
 ### V6.1
 
-information2 software products' manual
+Information2 Software Enterprise Products Manual
 
 ####     上海英方软件股份有限公司
 
