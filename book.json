@@ -3,7 +3,7 @@
 	"description": "英方股份企业版管理控制台用户使用手册",
 	"language" : "zh-hans",
 	"theme": "theme-green",
-	"copyright": "Copyright 2017 www.info2soft.com",
+	"copyright": "Copyright 2011-2018 www.info2soft.com",
 	"pluginsConfig": {
         "fontSettings": {
             "theme": "sepia",
@@ -12,12 +12,16 @@
         }
     },
     "variables": {
+	    "title": "i2灾备软件用户使用手册",
+        "theme": "theme-green",
+        "copyright": "Copyright 2011-2018 www.info2soft.com"
     },
     "collapsible_menu":true,
     "level_number":false,
     "links": {
 		"sidebar" : {
-            "英方官网" : "http://www.info2soft.com/"
+            "英方官网" : "http://www.info2soft.com/",
+            "英方云" : "http://www.i2yun.com/"
         },
         "gitbook": false
     },

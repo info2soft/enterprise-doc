@@ -2,9 +2,9 @@
 
 # i2灾备软件用户使用手册
 
-### V6.1
+### V6.2
 
-information2 software products' manual
+Information2 Software Enterprise Products Manual
 
 #### 上海英方软件股份有限公司
 
@@ -16,7 +16,7 @@ information2 software products' manual
 * [软件概览](introduction/introduction.md)
   * [系统架构](introduction/system_architecture.md)
   * [核心功能](introduction/core_functions.md)
-  * [端口说明](introduction/ports.md)
+  * [通信矩阵及端口说明](introduction/ports.md)
 * [安装和卸载](installation/README.md)
   * [节点\(i2Node\)安装](installation/node_install.md)
   * [控制机\(i2CtrlCenter\)安装](installation/ctrl_install.md)
@@ -62,7 +62,7 @@ information2 software products' manual
     * [mssql server备份](i2backup/backup_mssql.md)
   * [还原](i2backup/restore.md)
 * [实用工具（Utilities）](utilities/README.md)
-  * [一致性比较](utilities/consistency_comparison.md)
+  * [比较与同步](utilities/consistency_comparison.md)
   * [诊断](utilities/diagnosis.md)
 * [日志管理](others/log_management.md)
 * [技术支持](others/technical_support.md)
