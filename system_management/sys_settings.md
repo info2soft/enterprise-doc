@@ -144,7 +144,7 @@ Windows下用COMn，例如：COM1 (Linux下也可以用，COM1表示/dev/ttyS0)�
 
 ### 特殊参数 {#-6}
 
-![](/assets/v6.1.20180413100352.png)
+![](/assets/V6.22018060903.png)
 
 * “忽略镜像设置”：开启时会在创建复制规则时镜像设置中有跳过镜像设置。
 
@@ -156,6 +156,7 @@ Windows下用COMn，例如：COM1 (Linux下也可以用，COM1表示/dev/ttyS0)�
 
 ![](/assets/V6.118042604.png)
 
+* “FAST备份”：启用fast备份功能，开启后，在备份管理中可显示fast备份导航选项
 
 
 
