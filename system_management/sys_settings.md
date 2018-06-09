@@ -158,5 +158,5 @@ Windows下用COMn，例如：COM1 (Linux下也可以用，COM1表示/dev/ttyS0)�
 
 * “FAST备份”：启用fast备份功能，开启后，在备份管理中可显示fast备份导航选项
 
-
+![](/assets/V6.22018060904.png)
 
