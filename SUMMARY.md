@@ -26,6 +26,7 @@
   * [恢复管理](coopy_cdp/recovery_management.md)
 * [备份管理（i2Backup）](i2backup/README.md)
   * [备份](i2backup/backup.md)
+  * [fast备份](i2backup/fast.md)
   * [还原](i2backup/restore.md)
 * [实用工具（Utilities）](utilities/README.md)
   * [一致性比较](utilities/consistency_comparison.md)
