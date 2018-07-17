@@ -12,21 +12,21 @@ Nas同步分为三种不同的同步方式，具体拓扑流程图如下：
 
 1、同步主机模式发送数据，同步主机需要和服务器挂载相同路径
 
-![](/assets/V6.118042617.png)
+![img](/assets/v6.2.20180717001.png)
 
 2、服务器直接同步方式
 
-![](/assets/V6.118042617.png)
+![img](/assets/v6.2.20180717002.png)
 
 3、Windows系统api同步方式
 
 如果操作系统支持系统api的方式，可只在镜像服务器上安装i2软件，其他服务器不需要，此时镜像服务器会自动捕获其他服务器数据的变化，将变化的数据从镜像服务器传输到备份服务器
 
-![](/assets/V6.118042617.png)
+![img](/assets/v6.2.20180717003.png)
 
 如下是配置操作界面:
 
-![img](file:///C:\Users\ganl\AppData\Local\Temp\ksohtml\wps3068.tmp.jpg) 
+![img](/assets/v6.2.20180717004.png) 
 
  
 
@@ -40,15 +40,18 @@ Nas同步分为三种不同的同步方式，具体拓扑流程图如下：
 
 ² “灾备机”：需要将数据保护到此机器，添加具体路径
 
-![img](file:///C:\Users\ganl\AppData\Local\Temp\ksohtml\wps3079.tmp.jpg) 
+![img](/assets/v6.2.20180717005.png) 
+
 
 请参照4..2.2章
 
-![img](file:///C:\Users\ganl\AppData\Local\Temp\ksohtml\wps307A.tmp.jpg) 
+![img](/assets/v6.2.20180717006.png) 
+
 
 请参照4.2.6章
 
-![img](file:///C:\Users\ganl\AppData\Local\Temp\ksohtml\wps307B.tmp.jpg) 
+![img](/assets/v6.2.20180717007.png) 
+
 
 Nas同步单条规则可添加多个工作机，要求工作机挂载相同的nas，保护相同的nas路径，对一条nas同步规则，可操作单条和单个工作机规则
 
