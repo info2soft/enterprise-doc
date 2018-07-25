@@ -49,6 +49,7 @@
     * [块设备备份](i2backup/backup_blk.md)
     * [oracle备份](i2backup/backup_oracle.md)
     * [mssql server备份](i2backup/backup_mssql.md)
+  * [fast备份](i2backup/fast.md)
   * [还原](i2backup/restore.md)
 * [实用工具（Utilities）](utilities/README.md)
   * [比较与同步](utilities/consistency_comparison.md)
