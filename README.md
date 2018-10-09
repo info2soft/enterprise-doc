@@ -55,6 +55,7 @@ Information2 Software Enterprise Products Manual
   * [备份虚机](virtual_platform/vm_backup.md)
   * [迁移虚机](virtual_platform/vm_move.md)
   * [恢复虚机](virtual_platform/vm_restore.md)
+  * [复制虚机](virtual_platform/vm_rep.md)
 * [备份管理（i2Backup）](i2backup/README.md)
   * [备份](i2backup/backup.md)
     * [文件备份](i2backup/backup_file.md)
