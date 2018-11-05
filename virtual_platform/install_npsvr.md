@@ -66,10 +66,9 @@ linux卸载
 
 打开终端或使用xshell连接到主机，使用rpm –e命令进行NPSVR的卸载：
 
-[root@localhost /]# rpm -e info2soft-npsvr
+\[root@localhost /\]\# rpm -e info2soft-npsvr
 
 **注：**卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
-
 
 ### 灾备机部署 {#vddk}
 
@@ -81,7 +80,7 @@ linux卸载
 
 * ### Windows {#vddk}
 
-支持的Windows操作系统是Windows Server 2008 64位；
+支持的Windows操作系统是Windows 64位操作系统；
 
 双击安装info2soft-i2node-fori2vp-6.\*.\*\*\*\*\*\(x64\).exe文件；
 
