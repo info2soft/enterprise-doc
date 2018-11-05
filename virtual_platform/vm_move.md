@@ -77,11 +77,11 @@
 
 ![说明: 3](/assets/V6.036973.png)
 
-3.  控制机管理界面pending状态任务显示如下：
+控制机管理界面pending状态任务显示如下：
 
 ![说明: 2](/assets/V6.036999.png)
 
-4. 备份规则 迁移规则 保护规则 恢复规则的task总和 不能大于 bk_tsk_thd 设置的值；
+备份规则 迁移规则 保护规则 恢复规则的task总和 不能大于 bk_tsk_thd 设置的值；
 
 **注意**
 1. esxi  的传输量总和不能超过32M,system.conf  中  bk_tsk_thd * i2vp_transbuffer 的总数不能超过32
