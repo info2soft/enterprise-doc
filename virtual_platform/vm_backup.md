@@ -95,11 +95,12 @@
 2.  添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图：
 
 ![说明: 3](/assets/V6.036973.png)
-3.  控制机管理界面pending状态任务显示如下：
+
+控制机管理界面pending状态任务显示如下：
 
 ![说明: 2](/assets/V6.036999.png)
 
-备份规则 迁移规则 恢复规则的task总和不能大于bk_tsk_thd设置的值；
+备份规则 迁移规则 恢复规则的task数总和不能大于bk_tsk_thd设置的值；
 
 
 
