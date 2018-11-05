@@ -38,7 +38,7 @@
   * [全服务器迁移](full_server_protected/move.md)
 * [无代理备份（i2vp）](virtual_platform/README.md)
   * [NpServer部署](virtual_platform/install_npsvr.md)
-  * [虚拟平台注册](virtual_platform/add_vp.md)
+  * [虚拟平台](virtual_platform/add_vp.md)
   * [任务列表](virtual_platform/task_list.md)
   * [备份虚机](virtual_platform/vm_backup.md)
   * [迁移虚机](virtual_platform/vm_move.md)
