@@ -74,12 +74,14 @@
 
 1.  可根据客户需求可自行定义全局的task数量，在软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件添加bk_tsk_thd=n，n指可建立全局的task数量的最大值。默认情况下，全局的task数量为8.
 2.  添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图：
-3. 备份规则 迁移规则 保护规则 恢复规则的task总和 不能大于 bk_tsk_thd 设置的值
+
 ![说明: 3](/assets/V6.036973.png)
 
-1.  控制机管理界面pending状态任务显示如下：
+3.  控制机管理界面pending状态任务显示如下：
 
 ![说明: 2](/assets/V6.036999.png)
+
+4. 备份规则 迁移规则 保护规则 恢复规则的task总和 不能大于 bk_tsk_thd 设置的值；
 
 **注意**
 1. esxi  的传输量总和不能超过32M,system.conf  中  bk_tsk_thd * i2vp_transbuffer 的总数不能超过32
