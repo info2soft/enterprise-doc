@@ -119,10 +119,6 @@
 
 **注意：**
 
-选择完备份点才能显示备份点信息。
-
-**注意**：
-
 1.  可根据客户需求可自行定义全局的task数量，在软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件添加bk_tsk_thd=n，n指可建立全局的task数量的最大值。默认情况下，全局的task数量为8. 
 2.  添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图：
 
@@ -135,3 +131,5 @@
 备份规则 迁移规则 恢复规则的task数总和不能大于bk_tsk_thd设置的值；
 
 ESXI的传输量总和不能超过32M,system.conf 中 bk_tsk_thd * i2vp_transbuffer 的总数不能超过32;
+
+选择完备份点才能显示备份点信息。
