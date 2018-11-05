@@ -67,7 +67,7 @@
 *   “迁移”：迁移规则；
 
 
-**注意：**
+**注意**
 
 1. 可根据客户需求可自行定义全局的task数量，在软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件添加bk\_tsk\_thd=n，n指可建立全局的task数量的最大值。默认情况下，全局的task数量为8.
 2. 添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图：
