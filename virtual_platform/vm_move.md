@@ -79,5 +79,7 @@
 
 1.  控制机管理界面pending状态任务显示如下：
 
+![说明: 2](/assets/V6.036999.png)
+
 **注意**
 1. esxi  的传输量总和不能超过32M,system.conf  中  bk_tsk_thd * i2vp_transbuffer 的总数不能超过32
