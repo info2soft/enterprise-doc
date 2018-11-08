@@ -110,3 +110,5 @@
 4. 备份规则,迁移规则,恢复规则的task数总和不能大于bk\_tsk\_thd设置的值。
 
 5. ESXI的传输量总和不能超过32M,system.conf 中 bk\_tsk\_thd \* i2vp\_transbuffer 的总数不能超过32.
+
+6. 选择完备份点才能显示备份点信息。
