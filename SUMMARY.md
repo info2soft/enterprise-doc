@@ -45,6 +45,8 @@
   * [虚机迁移](virtual_platform/vm_move.md)
   * [虚机恢复](virtual_platform/vm_restore.md)
   * [瞬时恢复](virtual_platform/inst_restore.md)
+* [统计报表](statistic_report/README.md)
+  * [备份统计](statistic_report/bak_stat.md)
 * [备份管理（i2Backup）](i2backup/README.md)
   * [备份](i2backup/backup.md)
   * [还原](i2backup/restore.md)
