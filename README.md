@@ -52,6 +52,7 @@ Information2 Software Enterprise Products Manual
   * [NpServer部署](virtual_platform/install_npsvr.md)
   * [虚拟化支持](virtual_platform/vp_support.md)
   * [虚拟平台](virtual_platform/add_vp.md)
+  * [任务列表](virtual_platform/task_list.md)
   * [虚机备份](virtual_platform/vm_backup.md)
   * [虚机迁移](virtual_platform/vm_move.md)
   * [虚机恢复](virtual_platform/vm_restore.md)
