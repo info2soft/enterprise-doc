@@ -6,7 +6,7 @@
 
 Information2 Software Enterprise Products Manual
 
-####     上海英方软件股份有限公司
+#### 上海英方软件股份有限公司
 
 ![](/assets/qrcode2.png)
 

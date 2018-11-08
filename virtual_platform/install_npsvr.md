@@ -8,7 +8,7 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 ### Windows {#windows}
 
-支持的Windows操作系统是Windows Server 2008 64位；
+支持的Windows操作系统是Windows 64位操作系统；
 
 双击安装程序包，出现如下界面，点击next：
 
