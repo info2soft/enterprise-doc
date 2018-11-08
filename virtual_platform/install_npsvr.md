@@ -48,7 +48,7 @@ Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用�
 
 卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
-### Linux {#windows}
+### Linux {#Linux}
 
 支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
 
