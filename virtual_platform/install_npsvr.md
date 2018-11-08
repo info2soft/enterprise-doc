@@ -35,7 +35,7 @@ Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用�
 ### Windows卸载 {#windows-0}
 
 开始-&gt;所有程序-&gt;NoProxy Server,双击Npsvr自带卸载程序NoProxy Server Uninstaller；
-也可从控制面板中找到对应软件卸载；
+也可以从控制面板中找到对应软件卸载；
 以用NoProxy Server Uninstaller卸载程序举例，页面如下：
 
 ![说明: 1](/assets/V6.035317.png)
