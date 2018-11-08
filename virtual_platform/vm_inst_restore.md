@@ -5,7 +5,7 @@
 新建一个瞬时恢复，后台流程如下：
 1.NpServer让灾备机启动fuse和nfs；
 2.NpServer将nfs挂载到ESXI并创建虚拟机；
-3.NpServer下发信息，让灾备机将备份数据发给fuse，之后fuse独立运行，直接将数据写入到新虚拟磁盘中；
+3.NpServer下发信息，让灾备机将备份数据发给fuse，之后fuse独立运行，直接将数据写入到新虚拟机磁盘中；
 
 
 
