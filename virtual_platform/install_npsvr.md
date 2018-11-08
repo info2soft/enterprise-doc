@@ -70,7 +70,7 @@ linux卸载
 
 \[root@localhost /\]\# rpm -e info2soft-npsvr-6.1-xxxx
 
-**注：**卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
+**注** 卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
 ### 灾备机部署 {#vddk}
 
