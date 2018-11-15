@@ -8,7 +8,7 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 ### Windows {#windows}
 
-支持的Windows操作系统是Windows Server 2008 64位；
+支持的Windows操作系统是Windows 64位操作系统；
 
 双击安装程序包，出现如下界面，点击next：
 
@@ -28,13 +28,15 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 安装完成后确认Npsvr服务是否处于运行状态，并确认版本号信息。
 
-**注意：**
+**注意**
 
 Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用的端口可以被防火墙放行。
 
 ### Windows卸载 {#windows-0}
 
-开始-&gt;所有程序-&gt;NoProxy Server,双击Npsvr自带卸载程序NoProxy Server Uninstaller，也可从控制面板中找到对应软件卸载，以用NoProxy Server Uninstaller卸载程序举例，页面如下：
+开始-&gt;所有程序-&gt;NoProxy Server,双击Npsvr自带卸载程序NoProxy Server Uninstaller；
+也可以从控制面板中找到对应软件卸载；
+以用NoProxy Server Uninstaller卸载程序举例，页面如下：
 
 ![说明: 1](/assets/V6.035317.png)
 
@@ -42,11 +44,11 @@ Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用�
 
 ![说明: 1](/assets/V6.035327.png)
 
-**注意：**
+**注意**
 
 卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
-### Linux {#windows}
+### Linux {#Linux}
 
 支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
 
@@ -66,14 +68,15 @@ linux卸载
 
 打开终端或使用xshell连接到主机，使用rpm –e命令进行NPSVR的卸载：
 
-[root@localhost /]# rpm -e info2soft-npsvr
+\[root@localhost /\]\# rpm -e info2soft-npsvr-6.1-\*\*\*\*\*
 
-**注：**卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
+**注意**
 
+卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
 ### 灾备机部署 {#vddk}
 
-当虚机快照建立完成以后，灾备机与ESXI平台通信请求读取虚机的磁盘文件，备份传输到本地磁盘上，以VMDK形式保存；
+当虚拟平台上的虚机快照建立完成以后，灾备机与ESXI平台通信请求读取虚机的磁盘文件，备份传输到本地磁盘上，以VMDK形式保存；
 
 因此灾备机要有足够的磁盘空间，并且加载vddk动态库，i2VP提供独立的i2node安装包集成vddk；
 
@@ -81,7 +84,7 @@ linux卸载
 
 * ### Windows {#vddk}
 
-支持的Windows操作系统是Windows Server 2008 64位；
+支持的Windows操作系统是Windows 64位操作系统；
 
 双击安装info2soft-i2node-fori2vp-6.\*.\*\*\*\*\*\(x64\).exe文件；
 
