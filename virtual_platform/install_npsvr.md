@@ -6,7 +6,7 @@ NPSVR首次运行会生成默认的配置文件，停止NPSVR后可以修改默�
 
 NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPSVR重启时加载虚拟化平台的注册信息、建立连接并保持，加载备份规则并启动规则信息中标记为非停止和非完成状态的规则。
 
-### Windows {#windows}
+* ### Windows {#windows}
 
 支持的Windows操作系统是Windows 64位操作系统；
 
@@ -32,7 +32,7 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用的端口可以被防火墙放行。
 
-### Windows卸载 {#windows-0}
+* ### Windows卸载 {#windows-0}
 
 开始-&gt;所有程序-&gt;NoProxy Server,双击Npsvr自带卸载程序NoProxy Server Uninstaller；
 也可以从控制面板中找到对应软件卸载；
@@ -48,7 +48,7 @@ Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用�
 
 卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
-### Linux {#Linux}
+* ### Linux {#Linux}
 
 支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
 
@@ -64,7 +64,7 @@ rpm安装
 
 日志文件目录位置是/var/i2data/log/
 
-linux卸载
+* ### linux卸载 {#Linux-0}
 
 打开终端或使用xshell连接到主机，使用rpm –e命令进行NPSVR的卸载：
 
