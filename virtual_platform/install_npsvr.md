@@ -108,6 +108,7 @@ linux卸载
 
 
 **注意**
+
 关于vddk版本支持的说明：
 vddk6.0 plugin支持centos6.5到centos7.0；
 vddk6.5 plugin支持centos6.5到centos7.2；
