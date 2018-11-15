@@ -104,9 +104,9 @@
 
 **注意**
 
-* 可根据客户需求可自行定义全局的task数量，在软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件添加bk\_tsk\_thd=n，n指可建立全局的task数量的最大值。默认情况下，全局的task数量为8.
-* 备份规则,迁移规则,恢复规则的task数总和不能大于bk\_tsk\_thd设置的值。
-* ESXI的传输量总和不能超过32M，system.conf 中 bk\_tsk\_thd \* i2vp\_transbuffer 的总数不能超过32. \(i2vp\_transbuffer参数：备机与esxi之间每次传输的数据块大小，默认是4M\)
+* 可根据客户需求可自行定义全局的task数量，在备机软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件，添加bk\_tsk\_thd=n，n为总的最大任务并发数，默认为8，最多同时只能有8条任务在执行，包含虚机备份任务，恢复任务，迁移任务；
+* 备机软件的安装目录etc目录下system.conf文件中的i2vp_transbuffer参数，为备机与esxi之间每次传输的数据块大小，默认是4M；
+* ESXI的传输量总和不能超过32M，system.conf 中 bk\_tsk\_thd \* i2vp\_transbuffer 的总数不能超过32. 
 * 添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图：
 
 ![说明: 3](/assets/V6.036973.png)
