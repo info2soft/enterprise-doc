@@ -125,7 +125,7 @@ vddk6.5 plugin只支持El7操作系统；
 
 vddk6.5 plugin只能应用于i2node 6.1-23885之后的版本；
 
-如果要备份ESXI6.7版本上的虚机，必须使用vddk6.5 plugin；
+如果要备份ESXI6.7版本的虚机，必须使用vddk6.5 plugin；
 
 
 
