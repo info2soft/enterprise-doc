@@ -2,7 +2,7 @@
 
 # i2灾备软件用户使用手册
 
-### V6.2
+### V7.1
 
 Information2 Software Enterprise Products Manual
 
