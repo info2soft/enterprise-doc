@@ -25,6 +25,7 @@ Information2 Software Enterprise Products Manual
   * [初始信息配置](system_management/initialization_configuration.md)
   * [用户管理](system_management/user_management.md)
   * [组别管理](system_management/groupmanagement.md)
+  * [许可管理](system_management/license_management.md)
   * [节点管理](system_management/node_mangement.md)
   * [文件认证机制](system_management/file_authentication_mechanism.md)
   * [节点监控](system_management/node_monitor.md)
