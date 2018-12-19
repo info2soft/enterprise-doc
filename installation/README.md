@@ -12,20 +12,20 @@
 
 2、一般情况下工作机模块、灾备机模块和控制机模块分别独立部署在不同的服务器上，但也可任意部署在同一台或者两台机器上。比如，在服务器A上安装工作机模块，在服务器B上安装控制机模块和灾备机模块。
 
-   针对上述的三个模块，i2提供两类软件安装包：info2soft-i2node-6.2-\*安装包和info2soft-ctrlcenter-6.2-\*安装包，其中info2soft-i2node-6.2-\*安装包包含工作机模块和灾备机模块，info2soft-ctrlcenter-6.2-\*安装包包含控制机模块。
+针对上述的三个模块，i2提供两类软件安装包：info2soft-i2node-6.2-\*安装包和info2soft-ctrlcenter-6.2-\*安装包，其中info2soft-i2node-6.2-\*安装包包含工作机模块和灾备机模块，info2soft-ctrlcenter-6.2-\*安装包包含控制机模块。
 
 目前i2node支持安装平台支持列表如下：
 
 | i2node安装包名称 | 操作系统版本 |
 | --- | --- |
-| info2soft-i2node-6.x-xxxx.exe | Windows Server 2003 \(R2\) 32位 |
+| info2soft-i2node-7.x.x.xxxx.exe | Windows Server 2003 \(R2\) 32位 |
 |  | Windows Server 2008 32位 |
 |  | Windows Server 2012 32位 |
 |  | Windows XP SP3 32位 |
 |  | Windows 7 32位 |
 |  | Windows 8 32位 |
 |  | Windows 10 32位 |
-| info2soft-i2node-6.x-xxxx\(x64\).exe | Windows Server 2003 \(R2\) 64位 |
+| info2soft-i2node-7.x.x.xxxx\(x64\).exe | Windows Server 2003 \(R2\) 64位 |
 |  | Windows Server 2008 \(R2\) 64位 |
 |  | Windows Server 2012 \(R2\) 64位 |
 |  | Windows 7 64位 |
