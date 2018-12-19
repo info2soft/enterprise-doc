@@ -34,7 +34,7 @@
 
 其他设置参见：
 
-* [复制规则高级属性](coopy_cdp/advance_settings.md)
+* [复制规则高级属性](/coopy_cdp/advance_settings.md)
 
 ### 模板列表 {#-3}
 

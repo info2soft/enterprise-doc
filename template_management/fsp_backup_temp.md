@@ -33,7 +33,7 @@
 
 ### 带宽控制 {#-4}
 
-* [复制规则高级属性](coopy_cdp/advance_settings.md)
+* [复制规则高级属性](/coopy_cdp/advance_settings.md)
 
 ### 模板列表 {#-5}
 
