@@ -49,7 +49,7 @@ cc_proxy_port = 58082    #控制机Proxy端口，企业版里没有
 
 Windows位置:安装目录\etc\i2cc.conf, Linux: /etc/sdata/i2cc.conf
 ```
-cc_proxy_port=8082          #代理监听端口for工作机； 同i2port.conf中的cc_proxy_port
+cc_proxy_port=58082          #代理监听端口for工作机； 同i2port.conf中的cc_proxy_port
 ```
 `cc_web_port` 就是HTTP/HTTPS端口，可以再apache配置的文件中修改。
 
