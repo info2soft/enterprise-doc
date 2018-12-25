@@ -12,7 +12,7 @@ Linux下：执行 /etc/init.d/i2cs resetadmin 将密码重置
 
 执行 /etc/init.d/i2cs unlockadmin 为特殊情况下锁定的admin解锁
 
-`el7,请到/usr/local/sdata/ccscripts/下，执行resetadmin.sh`
+`el7,请到/usr/local/sdata/scripts/下，执行resetadmin.sh`
 
 ![](/assets/V6.015707.png)
 
