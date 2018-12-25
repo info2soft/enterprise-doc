@@ -17,6 +17,7 @@
   * [文件认证机制](system_management/file_authentication_mechanism.md)
   * [节点监控](system_management/node_monitor.md)
   * [系统参数](system_management/sys_settings.md)
+  * [警报设置](system_management/alert_setting.md)
   * [许可管理](system_management/software_management.md)
   * [节点在线升级](system_management/upgrade_node.md)
   * [控制机信息导入导出](system_management/cc_backup_restore.md)
