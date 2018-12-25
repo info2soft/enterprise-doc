@@ -67,6 +67,7 @@ rpm安装
 日志文件目录位置是/var/i2data/log/
 
 停止NPSVR的命令: service npsvr stop
+
 启动NPSVR的命令: service npsvr start
 
 * ### linux卸载 {#Linux-0}
