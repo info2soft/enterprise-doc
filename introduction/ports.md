@@ -40,7 +40,7 @@ rpc = 26821              #RPC服务端口
 mir_port = 26832         #镜像端口                     
 recover_port = 26831     #恢复端口              
 rep_port = 26833         #复制端口
-
+ha_arbit_port = 26868    #HA仲裁节点开放端口
 cc_web_port = 58080      #控制机的开放端口
 cc_proxy_port = 58082    #控制机Proxy端口，企业版里没有
 ```
