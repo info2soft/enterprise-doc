@@ -45,6 +45,7 @@ cc_web_port = 58080      #控制机的开放端口
 cc_proxy_port = 58082    #控制机Proxy端口，企业版里没有
 ```
 
+
 相应地，控制机端口如果修改的话，需要新增i2cc.conf
 
 Windows位置:安装目录\etc\i2cc.conf, Linux: /etc/sdata/i2cc.conf
