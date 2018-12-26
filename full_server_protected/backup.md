@@ -161,11 +161,12 @@
 ### VMDK备份文件使用说明 {#vmdk-0}
 
 1. 创建全服务器备份规则（勾选vmdk），具体步骤见7.1.1
+![](/assets/V6.1.2018122608.png)
 
-![](/assets/V6.032706.png)  
 2.  备份完成后，规则为“备份完成”的状态
+![](/assets/V6.1.2018122606.png)
 
-![](/assets/V6.032728.png)  
+  
 3.  备机在C:\33BACKUP\目录下会生成vmdk文件，将其.vmdk和.vmx文件拷贝出来并用VMware Workstation打开
 
 ![](/assets/V6.032800.png)
