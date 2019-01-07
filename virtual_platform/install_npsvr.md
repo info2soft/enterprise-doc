@@ -93,6 +93,8 @@ linux卸载
 
 双击安装info2soft-i2node-fori2vp-7.\*.\*.\*\*\*\*\*\(x64\).exe文件；
 
+安装完成以后进入bin目录检查vddk库文件是否存在；
+
 
 * ### Linux {#vddk}
 
