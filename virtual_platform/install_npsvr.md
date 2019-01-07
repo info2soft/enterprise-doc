@@ -1,6 +1,6 @@
 ## Npserver部署 {#npserver}
 
-NPSVR默认使用端口58083与ESXI的web service通信，以达到控制和信息获取的目的。确保NPSVR所使用的端口可以被防火墙放行。
+NPSVR默认使用端口26823与ESXI的web service通信，以达到控制和信息获取的目的。确保NPSVR所使用的端口可以被防火墙放行。
 
 NPSVR首次运行会生成默认的配置文件，停止NPSVR后可以修改默认配置项。如端口号、日志等级等等。
 
