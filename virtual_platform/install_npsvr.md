@@ -95,7 +95,6 @@ linux卸载
 
 安装完成以后进入bin目录检查vddk库文件是否存在；
 
-
 * ### Linux {#vddk}
 
 支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
