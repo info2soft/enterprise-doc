@@ -54,15 +54,19 @@ Npsvr默认使用端口26823与esxi的web service通信，确保npsvr所使用�
 
 rpm安装
 
-![](/assets/V6.140835.png)
+![](/assets/V7.020190107193346.png)
 
 安装完成后检查进程及端口；
 
-![](/assets/V6.140851.png)
+![](/assets/V7.020190107193520.png)
 
 配置文件目录位置是/etc/npsvr/
 
 日志文件目录位置是/var/i2data/log/
+
+停止NPSVR的命令: service npsvr stop
+
+启动NPSVR的命令: service npsvr start
 
 linux卸载
 
