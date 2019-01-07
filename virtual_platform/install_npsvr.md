@@ -72,9 +72,11 @@ linux卸载
 
 打开终端或使用xshell连接到主机，使用rpm –e命令进行NPSVR的卸载：
 
-[root@localhost /]# rpm -e info2soft-npsvr
+[root@localhost /]# rpm -e rpm -e info2soft-npsvr-7.1.2-28618.x86_64
 
-**注：**卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
+**注意：**
+
+卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
 
 ### 灾备机部署 {#vddk}
