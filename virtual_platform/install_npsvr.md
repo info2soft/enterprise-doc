@@ -1,4 +1,4 @@
-## Npserver部署 {#npserver}
+## NpServer部署 {#npserver}
 
 NPSVR默认使用端口26823与ESXI的web service通信，以达到控制和信息获取的目的。确保NPSVR所使用的端口可以被防火墙放行。
 
