@@ -32,7 +32,7 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 **注意：**
 
-Npsvr默认使用端口58083与esxi的web service通信，确保npsvr所使用的端口可以被防火墙放行。
+Npsvr默认使用端口26823与esxi的web service通信，确保npsvr所使用的端口可以被防火墙放行。
 
 ### Windows卸载 {#windows-0}
 
