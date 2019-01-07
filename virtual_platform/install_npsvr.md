@@ -100,11 +100,29 @@ linux卸载
 
 首先rpm安装i2node（与i2企业版的i2node相同）
 
-![](/assets/V6.141242.png)
+![](/assets/V7.020190107194209.png)
 
 然后rpm安装vddk plugins，注意版本对应；
 
-![](/assets/V6.141272.png)
+![](/assets/V7.020190107194313.png)
 
 安装完成以后，检查/usr/lib/vmware-vix-disklib/目录；
 
+
+**注意：**
+
+关于vddk版本支持的说明：
+
+vddk6.0 plugin支持centos6.5到centos7.0；
+
+vddk6.5 plugin支持centos6.5到centos7.2；
+
+vddk6.0 plugin可以支持ESXI：5.1 5.5 6.0 6.5；
+
+vddk6.5 plugin可以支持ESXI：5.5 6.0 6.5 6.7；
+
+vddk6.5 plugin只支持El7操作系统；
+
+vddk6.5 plugin只能应用于i2node 6.1-23885之后的版本；
+
+如果要备份ESXI6.7版本的虚机，必须使用vddk6.5 plugin；
