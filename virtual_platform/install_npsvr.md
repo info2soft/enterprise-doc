@@ -48,7 +48,7 @@ Npsvr默认使用端口26823与esxi的web service通信，确保npsvr所使用�
 
 卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
-### Linux {#linux}
+* ### Linux {#linux}
 
 支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
 
@@ -68,7 +68,7 @@ rpm安装
 
 启动NPSVR的命令: service npsvr start
 
-### Linux卸载 {#linux-0}
+* ### Linux卸载 {#linux-0}
 
 打开终端或使用xshell连接到主机，使用rpm –e命令进行NPSVR的卸载：
 
