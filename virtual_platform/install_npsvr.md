@@ -91,11 +91,8 @@ linux卸载
 
 支持的Windows操作系统是Windows Server 2008 64位；
 
-双击安装info2soft-i2node-fori2vp-6.\*.\*\*\*\*\*\(x64\).exe文件；
+双击安装info2soft-i2node-fori2vp-7.\*.\*.\*\*\*\*\*\(x64\).exe文件；
 
-安装完成以后进入bin目录检查vddk库文件是否存在；
-
-![](/assets/V6.141167.png)
 
 * ### Linux {#vddk}
 
