@@ -8,7 +8,7 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 建议部署时将控制机和NPSVR的系统时间保持一致；
 
-### Windows {#windows}
+* ### Windows {#windows}
 
 支持的Windows操作系统是Windows 64位操作系统；
 
@@ -34,7 +34,7 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 Npsvr默认使用端口26823与esxi的web service通信，确保npsvr所使用的端口可以被防火墙放行。
 
-### Windows卸载 {#windows-0}
+* ### Windows卸载 {#windows-0}
 
 开始-&gt;所有程序-&gt;NoProxy Server,双击Npsvr自带卸载程序NoProxy Server Uninstaller，也可从控制面板中找到对应软件卸载，以用NoProxy Server Uninstaller卸载程序举例，页面如下：
 
