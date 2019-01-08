@@ -24,7 +24,7 @@ Windows下安装控制机过程与安装i2node类似，这里不再介绍，请�
 
 来安装依赖包，再次执行控制机模块的安装命令：
 
-\[root@localhost ~\]\#rpm -ivh info2soft-ctrlcenter-6.x-xxxxx.el6.x86\_64.rpm
+\[root@localhost ~\]\#rpm -ivh info2soft-ctrlcenter-7.x.x-xxxxx.el6.x86\_64.rpm
 
 注意：RHEL6.X/CentOS6.X/CentOS7.x系统第一次安装控制机需要初始化数据库PostgreSQL
 
