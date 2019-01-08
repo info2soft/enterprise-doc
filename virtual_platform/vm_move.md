@@ -81,14 +81,24 @@
 *   “查看配置”：查看规则配置；
 *   “查看统计信息”：查看规则的统计信息；
 
+注：
+
+（1）如果一个虚机已经加了迁移规则，再添加其他规则时，选择虚机时，会在此虚机后标记(已迁移)，且不能再选择此虚机；
+
+（2）在选择虚机时，鼠标移至虚拟平台名称，后面会显示出一个Refresh按钮，点击此按钮，可重新获取虚拟平台的虚机列表；
+
+（3）虚机迁移规则是一次性任务；
 
 **注意**：
 
-1.  可根据客户需求可自行定义全局的task数量，在软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件添加bk_tsk_thd=n，n指可建立全局的task数量的最大值。默认情况下，全局的task数量为4.
-2.  添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图：
-3. 备份规则 迁移规则 保护规则 恢复规则的task总和 不能大于 bk_tsk_thd 设置的值
-![说明: 3](/assets/V6.036973.png)
+* 可根据客户需求可自行定义全局的task数量，在备机软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件，添加bk\_tsk\_thd=n，n为总的最大任务并发数，默认为4，最多同时只能有4条任务在执行，包含虚机备份任务，恢复任务，迁移任务\(不包含瞬时恢复任务\)；
 
+* 备机软件的安装目录etc目录下system.conf文件中的i2vp\_transbuffer参数，为备机与esxi之间每次传输的数据块大小，默认是4M；
 
-**注意**
-1. esxi  的传输量总和不能超过32M,system.conf  中  bk_tsk_thd * i2vp_transbuffer 的总数不能超过32
+* ESXI的传输量总和不能超过32M，system.conf 中 bk\_tsk\_thd \* i2vp\_transbuffer 的总数不能超过32.
+
+* 添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图： ![说明: 3](/assets/V6.036973.png) 控制机管理界面pending状态任务显示如下： ![说明: 2](/assets/V7.036999.png)
+
+* npsvr.ini配置文件中的Max\_ThreadNum\_PerHost参数，控制每个esxi主机的最大并发执行规则的数目，默认值为4，此参数受限于bk\_tsk\_thd参数的值；
+
+* 不支持包含独立磁盘的虚机的备份；
