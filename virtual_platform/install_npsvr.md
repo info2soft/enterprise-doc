@@ -90,7 +90,7 @@ rpm安装
 
 * ### Windows {#vddk}
 
-支持的Windows操作系统是Windows Server 2008 64位；
+支持的Windows操作系统是Windows 64位操作系统；
 
 双击安装info2soft-i2node-fori2vp-7.\*.\*.\*\*\*\*\*\(x64\).exe文件；
 
