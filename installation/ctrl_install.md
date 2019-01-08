@@ -16,11 +16,14 @@ Windows下安装控制机过程与安装i2node类似，这里不再介绍，请�
 
 打开终端或者Xshell/putty连接到服务器，以命令行安装方式为例：
 
-![](/assets/V6.114130.png)
+软件在安装之前，首先需要安装依赖包，软件依赖包会和软件一同发布，具体操作如下：
 
-根据依赖关系的先后安装相关的rpm包后，如果能联网，依赖包可通过
-
-`yum install info2soft-ctrlcenter-7.x.x-xxxxx.el6.x86_64.rpm`
+```
+将压缩包传到服务器上，并解压
+tar zxvf i2ctrl_deps_el7.4_x64.tar.gz
+cd i2ctrl_deps
+./install.sh
+```
 
 来安装依赖包，再次执行控制机模块的安装命令：
 
