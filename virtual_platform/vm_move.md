@@ -100,11 +100,11 @@
 * 添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，
 如下图：
 
-  ![说明: 3](/assets/V6.036973.png) 
+![说明: 3](/assets/V6.036973.png) 
   
-  控制机管理界面pending状态任务显示如下： 
+控制机管理界面pending状态任务显示如下： 
   
-  ![说明: 2](/assets/V7.036999.png)
+![说明: 2](/assets/V7.036999.png)
 
 * npsvr.ini配置文件中的Max\_ThreadNum\_PerHost参数，控制每个esxi主机的最大并发执行规则的数目，默认值为4，此参数受限于bk\_tsk\_thd参数的值；
 
