@@ -1,4 +1,4 @@
-# 系统管理
+# 系统设置
 
  * [初始信息配置](initialization_configuration.md)
  * [用户管理](user_management.md)
