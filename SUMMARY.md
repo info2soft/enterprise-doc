@@ -15,6 +15,7 @@
   * [系统参数](system_management/sys_settings.md)
   * [节点在线升级](system_management/upgrade_node.md)
   * [许可管理](system_management/license_management.md)
+  * [操作日志](others/log_management.md)
   * [控制机信息导入导出](system_management/cc_backup_restore.md)
 * [资源管理](template_management/README.md)
   * [组别管理](system_management/groupmanagement.md)
@@ -63,7 +64,7 @@
 * [实用工具（Utilities）](utilities/README.md)
   * [比较与同步](utilities/consistency_comparison.md)
   * [诊断](utilities/diagnosis.md)
-* [日志管理](others/log_management.md)
+
 * [技术支持](others/technical_support.md)
 * [附录](appendix/README.md)
   * [常见错误排查](appendix/troubleshooting.md)
