@@ -43,7 +43,6 @@ Information2 Software Enterprise Products Manual
   * [创建复制规则](coopy_cdp/new_rep.md)
   * [复制规则高级属性](coopy_cdp/advance_settings.md)
   * [NAS同步规则](coopy_cdp/nas_sync.md)
-  * [ASM同步](coopy_cdp/asm_sync.md)
   * [恢复管理](coopy_cdp/recovery_management.md)
 * [集群（Cluster）保护](mscs/README.md)
   * [前置条件](mscs/pre_condition.md)
