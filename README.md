@@ -49,9 +49,10 @@ Information2 Software Enterprise Products Manual
   * [应用高可用规则列表](i2availability/ha_management.md)
 * [NAS同步规则](coopy_cdp/nas_sync.md)
 * [全服务器保护](full_server_protected/README.md)
+  * [全服务器迁移](full_server_protected/move.md)
   * [全服务器备份](full_server_protected/backup.md)
   * [全服务器还原](full_server_protected/restore.md)
-  * [全服务器迁移](full_server_protected/move.md)
+
 * [无代理备份（i2vp）](virtual_platform/README.md)
   * [NpServer部署](virtual_platform/install_npsvr.md)
   * [虚拟平台注册](virtual_platform/add_vp.md)
