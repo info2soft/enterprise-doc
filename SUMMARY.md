@@ -22,7 +22,7 @@
   * [节点管理](resource_management/node_mangement.md)
   * [节点监控](resource_management/node_monitor.md)
   * [文件认证机制](resource_management/file_authentication_mechanism.md)
-  * [集群保护](mscs/README.md)
+  * [集群管理](mscs/README.md)
 * [模板管理](template_management/README.md)
   * [虚机备份模板](template_management/vp_backup_temp.md)
   * [虚机复制模板](template_management/vp_rep_temp.md)

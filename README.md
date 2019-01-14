@@ -45,7 +45,6 @@ Information2 Software Enterprise Products Manual
   * [复制规则高级属性](coopy_cdp/advance_settings.md)
   * [NAS同步规则](coopy_cdp/nas_sync.md)
   * [恢复管理](coopy_cdp/recovery_management.md)
-
 * [应用高可用（High Availability）](i2availability/README.md)
   * [添加应用高可用规则](i2availability/new_ha_rep.md)
   * [应用高可用规则列表](i2availability/ha_management.md)
