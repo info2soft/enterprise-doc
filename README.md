@@ -48,7 +48,6 @@ Information2 Software Enterprise Products Manual
 * [应用高可用（High Availability）](i2availability/README.md)
   * [添加应用高可用规则](i2availability/new_ha_rep.md)
   * [应用高可用规则列表](i2availability/ha_management.md)
-  * [高可用组](i2availability/HA_group.md)
 * [统计报表](statistics/README.md)
   * [备份报表](statistics/backup.md)
 * [全服务器保护](full_server_protected/README.md)
