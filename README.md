@@ -55,6 +55,7 @@ Information2 Software Enterprise Products Manual
   * [全服务器还原](full_server_protected/restore.md)
 * [无代理备份（i2vp）](virtual_platform/README.md)
   * [NpServer部署](virtual_platform/install_npsvr.md)
+  * [虚拟平台注册](virtual_platform/add_vp.md)
   * [虚机备份](virtual_platform/vm_backup.md)
   * [虚机迁移](virtual_platform/vm_move.md)
   * [虚机恢复](virtual_platform/vm_restore.md)
