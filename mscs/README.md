@@ -1,4 +1,4 @@
-# 集群（Cluster）保护 {#cluster}
+# 集群管理 {#cluster}
 
 目前英方软件支持对Windows Cluster的保护，其拓扑结构如下：
 ![](/assets/V6.127822.png)

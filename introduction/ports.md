@@ -15,7 +15,6 @@
 |  | HTTPS端口 | TCP | 55443 | HTTPS端口 |
 
 
-**注意**： HA心跳通讯方式设置分为TCP、UDP、ping三种方式，现阶段都是TCP方式，其他设置不起作用 
 
 ## 通信矩阵
 
@@ -29,8 +28,6 @@
 ||固定|随机(1024~65535)||灾备机|26831|tcp|用途：恢复端口<br/>服务/进程：srepd||无（非控制入口）|无|i2port.conf可修改|
 ||固定|随机(1024~65535)||仲裁节点|26868|tcp|用途：高可用仲裁<br/>服务/进程：i2Avalability||无（非控制入口）|无|i2port.conf可修改|
 ||固定|随机(1024~65535)||灾备机|26850|tcp|用途：高可用心跳<br/>服务/进程：i2Avalability||无（非控制入口）|无|i2port.conf可修改|
-|||||||||||||
-|||||||||||||
 |灾备机|固定|随机(1024~65535)||仲裁节点|26868|tcp|用途：高可用仲裁<br/>服务/进程：i2Avalability||无（非控制入口）|无|i2port.conf可修改|
 ||固定|随机(1024~65535)||工作机|26850|tcp|用途：高可用心跳<br/>服务/进程：i2Avalability||无（非控制入口）|无|i2port.conf可修改|
 
@@ -44,15 +41,17 @@ rpc = 26821              #RPC服务端口
 mir_port = 26832         #镜像端口                     
 recover_port = 26831     #恢复端口              
 rep_port = 26833         #复制端口
+ha_arbit_port = 26868    #HA仲裁节点开放端口
 cc_web_port = 58080      #控制机的开放端口
 cc_proxy_port = 58082    #控制机Proxy端口，企业版里没有
+
 ```
 
 相应地，控制机端口如果修改的话，需要新增i2cc.conf
 
 Windows位置:安装目录\etc\i2cc.conf, Linux: /etc/sdata/i2cc.conf
 ```
-cc_proxy_port=8082          #代理监听端口for工作机； 同i2port.conf中的cc_proxy_port
+cc_proxy_port=58082          #代理监听端口for工作机； 同i2port.conf中的cc_proxy_port
 ```
 `cc_web_port` 就是HTTP/HTTPS端口，可以再apache配置的文件中修改。
 
