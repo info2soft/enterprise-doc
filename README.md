@@ -70,8 +70,9 @@ Information2 Software Enterprise Products Manual
 * [统计报表](statistics/README.md)
   * [备份报表](statistics/backup.md)
 * [实用工具（Utilities）](utilities/README.md)
-  * [比较与同步](utilities/consistency_comparison.md)
   * [诊断](utilities/diagnosis.md)
+  * [比较与同步](utilities/consistency_comparison.md)
+
 
 * [技术支持](others/technical_support.md)
 * [附录](appendix/README.md)
