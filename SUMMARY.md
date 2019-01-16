@@ -29,6 +29,8 @@
   * [虚机复制模板](template_management/vp_rep_temp.md)
   * [全服务备份模板](template_management/fsp_backup_temp.md)
   * [全服务还原模板](template_management/fsp_restore_temp.md)
+  * [备份模板](template_management/backup_temp.md)
+  * [复制规则模板](template_management/rep_temp.md)
 * [数据的备份与恢复](coopy_cdp/README.md)
   * [创建复制规则](coopy_cdp/new_rep.md)
   * [复制规则高级属性](coopy_cdp/advance_settings.md)

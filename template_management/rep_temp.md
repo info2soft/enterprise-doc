@@ -4,10 +4,10 @@
 
 列表：
 
-![](/assets/201810151149.png)
+![](/assets/V7.1.2019011606.png)
 
 
 新建模板参考的页面如下，流程基本相似：
 
-* [文件备份](/i2backup/backup.md)
+* [复制规则高级属性](/coopy_cdp/advance_settings.md)
 
