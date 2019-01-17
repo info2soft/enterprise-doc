@@ -67,7 +67,6 @@
   * [消息接收管理](notification/messageManagement.md)
 
 
-
 * [技术支持](others/technical_support.md)
 * [附录](appendix/README.md)
   * [常见错误排查](appendix/troubleshooting.md)
