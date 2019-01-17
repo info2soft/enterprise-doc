@@ -81,9 +81,6 @@ Information2 Software Enterprise Products Manual
   * [消息接受管理](message_center/message_acceptance_management.md)
 
 
-
-
-
 * [技术支持](others/technical_support.md)
 * [附录](appendix/README.md)
   * [常见错误排查](appendix/troubleshooting.md)
