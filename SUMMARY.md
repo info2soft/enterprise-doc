@@ -58,7 +58,7 @@
     * [mssql server备份](i2backup/backup_mssql.md)
   * [还原](i2backup/restore.md)
 * [统计报表](statistics/README.md)
-  * [备份报表](statistics/backup.md)
+  * [备份统计](statistics/backup.md)
 * [实用工具（Utilities）](utilities/README.md)
   * [诊断](utilities/diagnosis.md)
   * [比较与同步](utilities/consistency_comparison.md)
