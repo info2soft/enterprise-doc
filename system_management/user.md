@@ -11,5 +11,5 @@ I2UP 默认内置以下类型用户：
 >* 只有“启用”状态的账号，才能登录到控台进行相关的操作。
 
 
-* [用户管理](system_management/user_management.md)
-* [角色管理](system_management/role_management.md)
+* [用户管理](user_management.md)
+* [角色管理](role_management.md)
