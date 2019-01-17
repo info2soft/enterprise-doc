@@ -4,7 +4,7 @@
 
 ### V7.1
 
-Information2 Software Enterprise Products Manual
+Information2 Software i2UP Manual
 
 ### 上海英方软件股份有限公司
 
