@@ -1,41 +1,41 @@
 {
-	"title": "i2灾备软件用户使用手册",
-	"description": "英方股份企业版管理控制台用户使用手册",
+	"title": "英方股份i2UP使用手册",
+	"description": "英方股份统一数据管理平台(i2UP)使用手册",
 	"language" : "zh-hans",
 	"theme": "theme-green",
 	"copyright": "Copyright 2011-2018 www.info2soft.com",
 	"pluginsConfig": {
-        "fontSettings": {
-            "theme": "sepia",
-            "family": "serif",
-            "size": 3
-        }
-    },
-    "variables": {
-	    "title": "i2灾备软件用户使用手册",
-        "theme": "theme-green",
-        "copyright": "Copyright 2011-2018 www.info2soft.com"
-    },
-    "collapsible_menu":true,
-    "level_number":false,
-    "links": {
+		"fontSettings": {
+			"theme": "sepia",
+			"family": "serif",
+			"size": 3
+		}
+	},
+	"variables": {
+		"title": "英方股份i2UP(统一数据管理平台)使用手册",
+		"theme": "theme-green",
+		"copyright": "Copyright 2011-2018 www.info2soft.com"
+	},
+	"collapsible_menu":true,
+	"level_number":false,
+	"links": {
 		"sidebar" : {
-            "英方官网" : "http://www.info2soft.com/",
-            "英方云" : "http://www.i2yun.com/"
-        },
-        "gitbook": false
-    },
-    "pdf": {
-        "pageNumbers": false,
-        "fontSize": 14,
-        "paperSize": "a4",
-        "margin": {
-            "right": 62,
-            "left": 62,
-            "top": 36,
-            "bottom": 36
-        },
-        "headerTemplate": null,
-        "footerTemplate": null
-    }
+			"英方官网" : "http://www.info2soft.com/",
+			"英方云" : "http://www.i2yun.com/"
+		},
+		"gitbook": false
+	},
+	"pdf": {
+		"pageNumbers": false,
+		"fontSize": 14,
+		"paperSize": "a4",
+		"margin": {
+			"right": 62,
+			"left": 62,
+			"top": 36,
+			"bottom": 36
+		},
+		"headerTemplate": null,
+		"footerTemplate": null
+	}
 }
