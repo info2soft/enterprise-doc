@@ -35,7 +35,7 @@ Information2 Software Enterprise Products Manual
   * [节点监控](resource_management/node_monitor.md)
   * [文件认证机制](resource_management/file_authentication_mechanism.md)
   * [集群管理](mscs/README.md)
-  * [存储管理](resource_management/README.md)
+  * [存储管理](resource_management/storage_management.md)
   * [虚拟平台](virtual_platform/add_vp.md)
 * [模板管理](template_management/README.md)
   * [虚机备份模板](template_management/vp_backup_temp.md)
