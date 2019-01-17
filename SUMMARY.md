@@ -44,7 +44,7 @@
   * [全服务器迁移](full_server_protected/move.md)
   * [全服务器备份](full_server_protected/backup.md)
   * [全服务器还原](full_server_protected/restore.md)
-* [无代理备份（i2vp）](virtual_platform/README.md)
+* [虚拟化支持（i2vp）](virtual_platform/README.md)
   * [NpServer部署](virtual_platform/install_npsvr.md)
   * [虚机备份](virtual_platform/vm_backup.md)
   * [虚机迁移](virtual_platform/vm_move.md)
