@@ -74,11 +74,9 @@ Information2 Software Enterprise Products Manual
 * [实用工具（Utilities）](utilities/README.md)
   * [诊断](utilities/diagnosis.md)
   * [比较与同步](utilities/consistency_comparison.md)
-* [消息中心](message_center/README.md)
-  * [全部消息](message_center/all_message.md)
-  * [未读消息](message_center/unread_message.md)
-  * [已读消息](message_center/read_message.md)
-  * [消息接受管理](message_center/message_acceptance_management.md)
+* [消息中心](notification/README.md)
+  * [消息通知](notification/message.md)
+  * [消息接收管理](notification/messageManagement.md)
 
 
 * [技术支持](others/technical_support.md)
