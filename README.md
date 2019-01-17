@@ -57,7 +57,6 @@ Information2 Software i2UP Manual
   * [全服务器还原](full_server_protected/restore.md)
 * [无代理备份（i2vp）](virtual_platform/README.md)
   * [NpServer部署](virtual_platform/install_npsvr.md)
-  * [虚拟平台注册](virtual_platform/add_vp.md)
   * [虚机备份](virtual_platform/vm_backup.md)
   * [虚机迁移](virtual_platform/vm_move.md)
   * [虚机恢复](virtual_platform/vm_restore.md)
@@ -74,16 +73,11 @@ Information2 Software i2UP Manual
 * [实用工具（Utilities）](utilities/README.md)
   * [诊断](utilities/diagnosis.md)
   * [比较与同步](utilities/consistency_comparison.md)
-* [消息中心](message_center/README.md)
-  * [全部消息](message_center/all_message.md)
-  * [未读消息](message_center/unread_message.md)
-  * [已读消息](message_center/read_message.md)
-  * [消息接受管理](message_center/message_acceptance_management.md)
+* [消息中心](notification/README.md)
+  * [消息通知](notification/message.md)
+  * [消息接收管理](notification/messageManagement.md)
 * [技术支持](others/technical_support.md)
 * [附录](appendix/README.md)
   * [常见错误排查](appendix/troubleshooting.md)
   * [英方软件错误代码说明](appendix/error_code.md)
   * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
-
-
-
