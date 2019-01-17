@@ -14,12 +14,11 @@ I2UP 默认内置以下类型用户：
 
 ** 修改profile **
 
-
-V7.1.20190117160913.png
+![](/assets/V7.1.20190117160913.png)
 
 ** 修改密码 **
 
-V7.1.20190117160953.png
+![](/assets/V7.1.20190117160953.png)
 
 * [用户管理](user_management.md)
 * [角色管理](role_management.md)
