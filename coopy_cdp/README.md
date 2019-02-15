@@ -8,5 +8,6 @@ i2灾备软件中实现一个灾备配置包含如下的两步，即创建节点
 
   * [创建复制规则](new_rep.md)
   * [复制规则高级属性](advance_settings.md)
+  * [复制规则组](rep_rules.md)
   * [ASM同步](asm_sync.md)
   * [恢复管理](recovery_management.md)
