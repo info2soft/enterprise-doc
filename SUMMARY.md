@@ -24,6 +24,7 @@
 * [数据的备份与恢复](coopy_cdp/README.md)
   * [创建复制规则](coopy_cdp/new_rep.md)
   * [复制规则高级属性](coopy_cdp/advance_settings.md)
+  * [复制规则组](coopy_cdp/rep_rules.md)
   * [ASM同步](coopy_cdp/asm_sync.md)
   * [恢复管理](coopy_cdp/recovery_management.md)
 * [集群（Cluster）保护](mscs/README.md)
