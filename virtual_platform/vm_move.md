@@ -79,7 +79,6 @@
    
    esxi的传输量总和不能超过32M,system.conf  中  bk_tsk_thd * i2vp_transbuffer 的总数不能超过32。
 
-
 2.  添加无代理备份的任务数大于全局的task数量的最大值时，debugctl.exe back task查看任务状态为pending状态，如下图：
 
 ![说明: 3](/assets/V6.036973.png)
