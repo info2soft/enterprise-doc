@@ -35,7 +35,7 @@
 
 ![说明: 1](/assets/V7.000024.png)
 
-![说明: 1](/assets/V7.000025.png)
+![说明: 1](/assets/V7.1.2019032505.png)
 
 *   “Oracle数据库实例名”：需要备份的数据库的SID
 *   “Oracle数据库Home目录”：安装Oracle软件的位置，可通过环境变量ORACLE_HOME查看
