@@ -1,6 +1,6 @@
 ![](/assets/i2-logo.png)
 
-# 英方股份i2UP(统一数据管理平台)使用手册
+# 英方股份i2UP\(统一数据管理平台\)使用手册
 
 ### V7.1
 
@@ -12,7 +12,7 @@ Information2 Software i2UP Manual
 
 # 目录
 
-* [i2灾备软件用户使用手册](README.md)
+* [i2灾备软件用户使用手册](README.md) 
 * [软件概览](introduction/introduction.md)
   * [系统架构](introduction/system_architecture.md)
   * [核心功能](introduction/core_functions.md)
@@ -84,3 +84,6 @@ Information2 Software i2UP Manual
   * [常见错误排查](appendix/troubleshooting.md)
   * [英方软件错误代码说明](appendix/error_code.md)
   * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
+
+
+
