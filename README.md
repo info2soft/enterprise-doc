@@ -32,7 +32,7 @@ Information2 Software i2UP Manual
   * [配置备份](system_management/cc_backup_restore.md)
   * [操作日志](system_management/log_management.md)
 * [资源管理](resource_management/README.md)
-  * [组别管理](resource_management/groupmanagement.md)
+  * [业务组管理](resource_management/groupmanagement.md)
   * [节点管理](resource_management/node_mangement.md)
   * [节点监控](resource_management/node_monitor.md)
   * [文件认证机制](resource_management/file_authentication_mechanism.md)
