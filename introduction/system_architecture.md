@@ -1,4 +1,4 @@
-![i2软件网络架构图](/assets/i2-architecture.png)a
+![i2软件网络架构图](/assets/i2-architecture.png)
 
 ```
     i2UP共分为三部分：工作机模块、灾备机模块、控制机模块。
