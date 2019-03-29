@@ -17,6 +17,8 @@
 |  | Oracle数据库备份端口 | TCP | 26876 | 工作机-&gt;灾备机， Oracle数据库备份端口|
 | 控制机 | HTTP端口 | TCP | 58080 | HTTP端口 |
 |  | HTTPS端口 | TCP | 58086 | HTTPS端口 |
+|  | I2Node Proxy端口 | TCP | 58082 | I2Node Proxy端口 |
+|  | Active Proxy端口 | TCP | 58083 | Active Proxy端口 |
 
 
 
