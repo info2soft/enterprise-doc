@@ -174,13 +174,9 @@ MOUNTD_PORT=42367
 
 重启防火墙：service iptables restart  
 
-* 安装i2node节点和i2vp plugin  
+* 重启i2node服务，service i2node restart 
 
-(如果已经安装过了，此处重启i2node服务，service i2node restart)  
-
-* 安装npsvr软件(如果需要)  
-
-(如果已经安装过了，此处重启npsvr服务，service npsvr restart)  
+* 如果此台机器安装了npsvr软件，重启npsvr服务，service npsvr restart
 
 * 查看防火墙规则，执行iptables --list  
 
