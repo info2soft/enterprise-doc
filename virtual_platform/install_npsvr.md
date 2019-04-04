@@ -106,7 +106,7 @@ rpm安装
 
 ![](/assets/V7.120190404151436.png)
 
-然后rpm安装vddk plugins，注意版本对应；
+然后rpm安装vddk plugin，注意版本对应；
 
 ![](/assets/V7.120190404151532.png)
 
