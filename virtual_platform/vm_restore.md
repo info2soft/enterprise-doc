@@ -116,3 +116,115 @@
 *   “启动”：启动此虚机的规则；
 *   “停止”：停止此虚机的规则；
 *   “删除”：删除此虚机的规则；
+
+
+### 瞬时恢复环境搭建步骤 {#-4}
+
+**灾备机是Centos6.5_64bit操作系统**
+
+* yum install fuse fuse\* fuse-\*
+* yum install gcc gcc-c++
+* yum install nfs nfs\*
+* yum install rpcbind
+* /etc/init.d/rpcbind start
+* /etc/init.d/nfs start
+* 新建目录/root/disk/nfs，作为nfs共享的目录
+* chown -R nfsnobody:nfsnobody /root/disk/nfs
+* 修改/etc/exports文件如下：
+
+[root@localhost /]# cat /etc/exports
+
+/root/disk/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
+
+其中“/root/disk/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
+
+* /etc/init.d/nfs restart
+* 新建目录/root/disk/tmp，用来存放新建的虚拟机
+* chown -R nfsnobody:nfsnobody /root/disk/tmp
+* 检查/usr/local/sdata/sbin目录下是否有fuse_start文件
+* 检查/usr/local/sdata/scripts目录下是否有fuse_script.sh文件
+* 修改/etc/sdata/system.conf文件(如果文件不存在，则新建system.conf文件)
+
+文件中存放三个变量：fuse_script, tmpdir, nfsdir三者缺一不可。
+
+[root@localhost sdata]# cat system.conf
+
+fuse_script=/usr/local/sdata/scripts/fuse_script.sh
+
+tmpdir=/root/disk/tmp
+
+nfsdir=/root/disk/nfs
+
+其中“fuse_script”表示的是脚本执行路径，“tmpdir”是实际存储的虚拟机的位置，“nfsdir”实际上是fuse将tmpdir映射到nfsdir，并且nfsdir目录是nfs目录，nfsdir路径中的目录需要与/etc/exports中的目录对应上。
+
+* service i2node restart
+
+* 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
+
+由于nfs服务需要开启 mountd, nfs, nlockmgr, portmapper, rquotad这5个服务，需要将这5个服务的端口加到iptables里面。而nfs和portmapper两个服务是固定端口的，nfs为2049，portmapper为111，其他的3个服务是用的随机端口，那就需要先把这3个服务的端口设置成固定的，用命令rpcinfo -p 查看当前这5个服务的端口，并记录下来。  
+
+nfs 2049, portmapper 111, mountd 42367, rquotad 875,nlockmgr 48844
+
+设置/etc/sysconfig/nfs配置文件，配置端口使rquotad，nlockmgr，mountd的端口固定，添加如下几行：
+
+RQUOTAD_PORT=875
+
+LOCKD_TCPPORT=48844
+
+LOCKD_UDPPORT=48844
+
+MOUNTD_PORT=42367
+
+重启nfs服务，/etc/init.d/nfs restart
+
+在防火墙中开放这5个端口, 在/etc/sysconfig/iptables添加如下几行，必须加在icmp-host-prohibited那两行之前：
+
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 111 -j ACCEPT
+
+-A INPUT -p udp -s 192.168.0.0/16 --dport 111 -j ACCEPT
+
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 2049 -j ACCEPT
+
+-A INPUT -p udp -s 192.168.0.0/16 --dport 2049 -j ACCEPT
+
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 42367 -j ACCEPT
+
+-A INPUT -p udp -s 192.168.0.0/16 --dport 42367 -j ACCEPT
+
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 875 -j ACCEPT
+
+-A INPUT -p udp -s 192.168.0.0/16 --dport 875 -j ACCEPT
+
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 48844 -j ACCEPT
+
+-A INPUT -p udp -s 192.168.0.0/16 --dport 48844 -j ACCEPT
+
+![说明: 1](/assets/20190404125335.png)
+
+重启防火墙：service iptables restart
+
+* 重启i2node服务，service i2node restart
+
+* 如果此台机器安装了npsvr软件，重启npsvr服务，service npsvr restart
+
+* 查看防火墙规则，执行iptables --list
+
+![说明: 1](/assets/20190404125356.png)
+
+* 页面上添加节点和虚拟平台
+
+* 新建虚机备份任务
+
+![说明: 1](/assets/V7.120190404153244.png)
+
+* 新建瞬时恢复任务
+
+![说明: 1](/assets/V7.120190404153310.png)
+
+* 灾备机：
+
+![说明: 1](/assets/20190404125302.png)
+
+* esxi平台：
+
+![说明: 1](/assets/esxi-platform.png)
