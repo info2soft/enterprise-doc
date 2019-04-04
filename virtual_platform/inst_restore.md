@@ -92,9 +92,9 @@
 ### 瞬时恢复环境搭建步骤 {#-4}
 
 ** 灾备机是Centos6.5_64bit操作系统 **
-1. yum install fuse fuse* fuse-*
+1. yum install fuse fuse\* fuse-\*
 2. yum install gcc gcc-c++
-3. yum install nfs nfs*
+3. yum install nfs nfs\*
 4. yum install rpcbind
 5. /etc/init.d/rpcbind start
 6. /etc/init.d/nfs start
