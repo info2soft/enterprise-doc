@@ -91,7 +91,8 @@
 
 ### 瞬时恢复环境搭建步骤 {#-4}
 
-**灾备机是Centos6.5_64bit操作系统**
+**灾备机是Centos6.5_64bit操作系统**  
+
 * yum install fuse fuse\* fuse-\*
 * yum install gcc gcc-c++
 * yum install nfs nfs\*
