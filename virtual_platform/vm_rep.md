@@ -93,7 +93,7 @@
 
 **注意**：
 
-1.  可根据客户需求可自行定义全局的task数量，在软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件添加bk_tsk_thd=n，n指可建立全局的task数量的最大值。默认情况下，全局的task数量为4。
+1. * 可根据客户需求可自行定义全局的task数量，在软件的安装目录etc目录下新建system.conf文件，编辑system.conf文件添加bk_tsk_thd=n，n指可建立全局的task数量的最大值。默认情况下，全局的task数量为4。
 
    备份规则 迁移规则 保护规则 恢复规则的task总和 不能大于 bk_tsk_thd 设置的值。
    
