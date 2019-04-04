@@ -84,6 +84,8 @@ Information2 Software i2UP Manual
   * [常见错误排查](appendix/troubleshooting.md)
   * [英方软件错误代码说明](appendix/error_code.md)
   * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
+  * [升级错误代码说明](appendix/error_code_upgrade.md)
+
 
 
 
