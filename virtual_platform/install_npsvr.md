@@ -104,11 +104,11 @@ rpm安装
 
 首先rpm安装i2node（与i2企业版的i2node相同）
 
-![](/assets/V7.020190107194209.png)
+![](/assets/V7.120190404151436.png)
 
 然后rpm安装vddk plugins，注意版本对应；
 
-![](/assets/V7.020190107194313.png)
+![](/assets/V7.120190404151532.png)
 
 安装完成以后，检查/usr/lib/vmware-vix-disklib/目录；
 
