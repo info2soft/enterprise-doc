@@ -143,6 +143,14 @@ MOUNTD_PORT=42367
 (如果已经安装过了，此处重启i2node服务，service i2node restart)
 19. 安装npsvr软件(如果需要)
 (如果已经安装过了，此处重启npsvr服务，service npsvr restart)
-20. 查看防火墙规则，执行iptables --list，结果如下图所示：
+20. 查看防火墙规则，执行iptables --list
 ![说明: 1](/assets/20190404125356.png)
-
+21. 页面上添加节点和虚拟平台
+22. 新建虚机备份任务
+![说明: 1](/assets/20190404125209.png)
+23. 新建瞬时恢复任务
+![说明: 1](/assets/20190404125140.png)
+24. 灾备机：
+![说明: 1](/assets/20190404125302.png)
+esxi平台：
+![说明: 1](/assets/esxi-platform.png)
