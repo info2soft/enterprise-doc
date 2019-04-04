@@ -126,6 +126,23 @@ LOCKD_TCPPORT=48844
 LOCKD_UDPPORT=48844
 MOUNTD_PORT=42367
 重启nfs服务，/etc/init.d/nfs restart
-
-
+在防火墙中开放这5个端口, 在/etc/sysconfig/iptables添加如下几行，必须加在icmp-host-prohibited那两行之前：
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 111 -j ACCEPT
+-A INPUT -p udp -s 192.168.0.0/16 --dport 111 -j ACCEPT
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 2049 -j ACCEPT
+-A INPUT -p udp -s 192.168.0.0/16 --dport 2049 -j ACCEPT
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 42367 -j ACCEPT
+-A INPUT -p udp -s 192.168.0.0/16 --dport 42367 -j ACCEPT
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 875 -j ACCEPT
+-A INPUT -p udp -s 192.168.0.0/16 --dport 875 -j ACCEPT
+-A INPUT -p tcp -s 192.168.0.0/16 --dport 48844 -j ACCEPT
+-A INPUT -p udp -s 192.168.0.0/16 --dport 48844 -j ACCEPT
+![说明: 1](/assets/20190404125335.png)
+重启防火墙：service iptables restart
+18. 安装i2node节点和i2vp plugin
+(如果已经安装过了，此处重启i2node服务，service i2node restart)
+19. 安装npsvr软件(如果需要)
+(如果已经安装过了，此处重启npsvr服务，service npsvr restart)
+20. 查看防火墙规则，执行iptables --list，结果如下图所示：
+![说明: 1](/assets/20190404125356.png)
 
