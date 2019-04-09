@@ -2,7 +2,7 @@
 
 # 英方股份i2UP\(统一数据管理平台\)使用手册
 
-### V7.1
+### V7.2
 
 Information2 Software i2UP Manual
 
