@@ -266,11 +266,7 @@ nfsdir=/root/disk/nfs
 
 其中“fuse_script”表示的是脚本执行路径，“tmpdir”是实际存储的虚拟机的位置，“nfsdir”实际上是fuse将tmpdir映射到nfsdir，并且nfsdir目录是nfs目录，nfsdir路径中的目录需要与/etc/exports中的目录对应上。
 
-* 重启i2node服务:
-
-/usr/local/sdata/scripts/systemctrl.sh stop
-
-/usr/local/sdata/scripts/systemctrl.sh start
+* service i2node restart
 
 * 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
 
