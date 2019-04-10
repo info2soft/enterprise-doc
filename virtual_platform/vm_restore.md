@@ -314,11 +314,7 @@ firewall-cmd --permanent --add-port=48844/udp
 
 重启防火墙：systemctl restart firewalld
 
-* 重启i2node服务:
-
-/usr/local/sdata/scripts/systemctrl.sh stop
-
-/usr/local/sdata/scripts/systemctrl.sh start
+* 重启i2node服务: service i2node restart
 
 * 如果此台机器安装了npsvr软件，重启npsvr服务，systemctl restart npsvr
 
