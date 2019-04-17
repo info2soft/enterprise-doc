@@ -123,7 +123,6 @@
 **灾备机是Centos6.5_64bit操作系统**
 
 * yum install fuse fuse\* fuse-\*
-* yum install gcc gcc-c++
 * yum install nfs nfs\*
 * yum install rpcbind
 * /etc/init.d/rpcbind start
