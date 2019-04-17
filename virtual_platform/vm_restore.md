@@ -232,7 +232,6 @@ MOUNTD_PORT=42367
 **灾备机是Centos7.0_64bit操作系统**
 
 * yum install fuse fuse\* fuse-\*
-* yum install gcc gcc-c++
 * yum install nfs nfs\*
 * yum install rpcbind
 * systemctl start rpcbind
