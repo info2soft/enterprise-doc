@@ -103,15 +103,13 @@
 
 1. .X64环境\(windows 2008及以上版本\)
 
-2. 创建C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows 文件夹并将相应的windows 模板（\*.vmdk文件）放在该文件夹下
+2. 直接安装info2soft-i2node-*-fori2vp(x64)软件包，安装完成后在C:\Program Files (x86)\info2soft-i2node\bin目录下，点击vstor2install.bat(最好通过cmd命令执行，这样能看到执行结果是否正常)，安装驱动。重启节点
 
-3. 停止i2node服务，
-
-4. 把VMDK备份\windows\vddk\5.5目录下的所有文件放到C:\Program Files \(x86\)\info2soft-i2node\bin目录下，点击vstor2install.bat\(最好通过cmd命令执行，这样能看到执行结果是否正常\)，安装驱动，点击verifysslcertificates.reg，添加注册表项。
+3. 创建C:\Program Files (x86)\info2soft-i2node\vmdk\Windows 文件夹，将模板文件放置在此文件夹下，模板在192.168.83.201上的vmdk文件夹下（注意：7.1版本要将模板文件的名字中的“_V”去掉，详见存放模板的文件夹下的Readme）
 
 **注意：**
 
-如果是多个磁盘的vmdk备份，将windows模板（_.vmdk文件）中的Windows Server.vmdk放在C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows目录下，当备份完成后，打开虚拟机前需要将_-1.vmdk、\*-2.vmdk，依次数字序挂载到虚拟机上。
+如果是多个磁盘的vmdk备份，将windows模板（_.vmdk文件）中的Windows Server.vmdk放在C:\Program Files \(x86\)\info2soft-i2node\vmdk\Windows目录下，当备份完成后，打开虚拟机前需要将_-1.vmdk、\*-2.vmdk，依次数字序挂载到虚拟机上。此文件在在规则配置为不勾选备端拉起时，也需要拷贝到目录下。
 
 **Linux工作机要求：**
 
@@ -119,21 +117,10 @@
 
 **Linux备机环境：**
 
-**方法一**
 
-1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（\*.vmdk文件）放在该目录下。
+1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（*.vmdk文件）放在该目录下（注意：若规则配置为不勾选备端拉起，则要拷贝CentOS.vmdk文件到目录下）。
 
-2. 把VMDK备份\linux\vddk\5.5目录下的所有文件放到备机/usr/local/sdata/sbin目录下。
-
-3. /etc/init.d/i2node 在i2fw函数前增加一行 “export LD\_LIBRARY\_PATH=/usr/local/sdata/sbin/”。
-
-4. 重启i2node服务，使其生效。
-
-**方法二**
-
-1. 创建/usr/local/sdata/vmdk/CentOS/目录并将centos模板（*.vmdk文件）放在该目录下。
-
-2. 打开终端或xshell，进行i2vp_plugin的安装，如下图所示：
+2. 打开终端或xshell，先安装i2node节点包，然后进行i2vp_plugin的安装，如下图所示：
 
 ![](/assets/V6.118042624.png)
 
@@ -148,8 +135,6 @@
 **注意：**
 
 如果工作机分区，除了/boot、 / 、swap 分区之外。还有其他分区，创建vmdk备份规则的时候，可以选择添加该分区，例如home分区（添加分区的步骤:添加-&gt;手动输入/home/,并且要保持格式一致。）；
-
-![](/assets/V6.032223.png)
 
 也可以选择不添加该分区，这样备份时只是把它当成普通的目录处理。当备份完成后，打开虚拟机前需要将_-1.vmdk 、_-2.vmdk等，依照数字次序挂载到虚拟机上。
 
