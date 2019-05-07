@@ -8,7 +8,7 @@
 
 ![](/assets/V7.028614.png)
 
-![](/assets/20190428102735.png)
+![](/assets/.png)
 
 ![](/assets/V7.028615.png)
 
