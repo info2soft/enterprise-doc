@@ -228,6 +228,30 @@ MOUNTD_PORT=42367
 
 ![说明: 1](/assets/esxi-platform.png)
 
+
+**注意**
+
+如果执行df -h命令后，结果没有出现fuse_start那一行，可能需要手动启动一下fuse
+
+先执行cd /usr/local/sdata/scripts
+
+然后执行./fuse_script.sh 0 /root/disk/tmp/ /root/disk/nfs
+
+执行结果中出现:
+
+fuse: mountpoint is not empty
+
+fuse: if you are sure this is safe, use the 'nonempty' mount option
+
+fuse_main returned 1
+
+说明用fuse_script.sh没有启动fuse
+
+此时执行/usr/local/sdata/sbin/fuse_start -o nonempty /root/disk/tmp /root/disk/nfs
+
+再执行df -h命令，应该会出现fuse_start那一行
+
+
 **灾备机是Centos7.0_64bit操作系统**
 
 * yum install fuse fuse\* fuse-\*
