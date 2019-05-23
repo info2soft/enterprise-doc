@@ -14,6 +14,8 @@
 
 针对上述的三个模块，i2提供两类软件安装包：info2soft-i2node-7.x.x.xxxx\*安装包和info2soft-ctrlcenter-7.x.x.xxxx\*安装包，其中info2soft-i2node-7.x.x.xxxx\*安装包包含工作机模块和灾备机模块，info2soft-ctrlcenter-7.x.x.xxxx\*安装包包含控制机模块。
 
+## I2节点安装
+
 目前i2node支持安装平台支持列表如下：
 
 | i2node安装包名称 | 操作系统版本 |
@@ -55,6 +57,8 @@
 | info2soft-i2node-7.x.x.xxxx.debian.7.1.x86\_64.deb | Debian 7.1 64位 |
 | info2soft-i2node-7.x.x.xxxx.debian.7.4.x86\_64.deb | Debian 7.4 64位 |
 
+## I2控制机安装
+
 I2控制机安装平台支持的是：el6系列、el7系列，以及Windows XP SP3、Windows Server 2008和Windows 7及win7以上系统，支持32位和64位平台，如以版本7.x.x.xxxx为例，对应安装包参考如下列表：
 
 | ctrlcenter安装包名称 | 操作系统版本 |
@@ -70,7 +74,28 @@ I2控制机安装平台支持的是：el6系列、el7系列，以及Windows XP S
 ```
 所有模块的安装必须在Linux/Unix root用户、Windows administrator用户或具有相关超级权限的用户下进行。
 ```
+
+## DTO主机安装：
+
+### Windows 同步机支持的系统
+
+Windows2008R2 以上版本，仅支持64 位
+
+### Linux 同步机支持的系统
+
+centos6.x_64 位、centos7.x_64 位
+
+注：部署方式不同，同步机和控制机可为同一机器，也可单独部署。
+
+### 安装包说明
+
+i2DTO 提供两种安装包：dto-syncer-x64、dto-syncer-lin-x64：
+
+1.  dto-syncer-x64 是兼 windows 同步主机和控制机模块的安装包；
+2.  dto-syncer-lin-x64 是 linux 同步主机模块的安装包。
+
 * [节点\(i2Node\)安装](node_install.md)
+* [DTO主机\(dto-syncer\)安装](dto_host_install.md)
 * [控制机\(i2CtrlCenter\)安装](ctrl_install.md)
 * [软件卸载](soft_uninstall.md)
 
