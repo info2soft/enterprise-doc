@@ -123,7 +123,6 @@
 **灾备机是Centos6.5_64bit操作系统**
 
 * yum install fuse fuse\* fuse-\*
-* yum install gcc gcc-c++
 * yum install nfs nfs\*
 * yum install rpcbind
 * /etc/init.d/rpcbind start
@@ -228,3 +227,141 @@ MOUNTD_PORT=42367
 * esxi平台：
 
 ![说明: 1](/assets/esxi-platform.png)
+
+
+** 注意 **
+
+如果执行df -h命令后，结果没有出现fuse_start那一行，可能需要手动启动一下fuse
+
+先执行cd /usr/local/sdata/scripts
+
+然后执行./fuse_script.sh 0 /root/disk/tmp/ /root/disk/nfs
+
+执行结果中出现:
+
+fuse: mountpoint is not empty
+
+fuse: if you are sure this is safe, use the 'nonempty' mount option
+
+fuse_main returned 1
+
+说明用fuse_script.sh没有启动fuse
+
+此时执行/usr/local/sdata/sbin/fuse_start -o nonempty /root/disk/tmp /root/disk/nfs
+
+再执行df -h命令，应该会出现fuse_start那一行
+
+
+**灾备机是Centos7.0_64bit操作系统**
+
+* yum install fuse fuse\* fuse-\*
+* yum install nfs nfs\*
+* yum install rpcbind
+* systemctl start rpcbind
+* systemctl start nfs 
+* 新建目录/root/disk/nfs，作为nfs共享的目录
+* chown -R nfsnobody:nfsnobody /root/disk/nfs
+* 修改/etc/exports文件如下：
+
+[root@localhost /]# cat /etc/exports
+
+/root/disk/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
+
+其中“/root/disk/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
+
+* systemctl restart nfs
+* 新建目录/root/disk/tmp，用来存放新建的虚拟机
+* chown -R nfsnobody:nfsnobody /root/disk/tmp
+* 检查/usr/local/sdata/sbin目录下是否有fuse_start文件
+* 检查/usr/local/sdata/scripts目录下是否有fuse_script.sh文件
+* 修改/etc/sdata/system.conf文件(如果文件不存在，则新建system.conf文件)
+
+文件中存放三个变量：fuse_script, tmpdir, nfsdir三者缺一不可。
+
+[root@localhost sdata]# cat system.conf
+
+fuse_script=/usr/local/sdata/scripts/fuse_script.sh
+
+tmpdir=/root/disk/tmp
+
+nfsdir=/root/disk/nfs
+
+其中“fuse_script”表示的是脚本执行路径，“tmpdir”是实际存储的虚拟机的位置，“nfsdir”实际上是fuse将tmpdir映射到nfsdir，并且nfsdir目录是nfs目录，nfsdir路径中的目录需要与/etc/exports中的目录对应上。
+
+* service i2node restart
+
+* 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
+
+由于nfs服务需要开启 mountd, nfs, nlockmgr, portmapper, rquotad这5个服务，需要将这5个服务的端口加到iptables里面。而nfs和portmapper两个服务是固定端口的，nfs为2049，portmapper为111，其他的3个服务是用的随机端口，那就需要先把这3个服务的端口设置成固定的，用命令rpcinfo -p 查看当前这5个服务的端口，并记录下来。  
+
+nfs 2049, portmapper 111, mountd 42367, rquotad 875,nlockmgr 48844
+
+设置/etc/sysconfig/nfs配置文件，配置端口使rquotad，nlockmgr，mountd的端口固定，添加如下几行：
+
+RQUOTAD_PORT=875
+
+LOCKD_TCPPORT=48844
+
+LOCKD_UDPPORT=48844
+
+MOUNTD_PORT=42367
+
+重启nfs服务，systemctl restart nfs
+
+在防火墙中开放这5个端口, 执行如下命令：
+
+firewall-cmd --permanent --add-port=111/tcp
+
+firewall-cmd --permanent --add-port=111/udp
+
+firewall-cmd --permanent --add-port=2049/udp
+
+firewall-cmd --permanent --add-port=2049/tcp
+
+firewall-cmd --permanent --add-port=42367/tcp
+
+firewall-cmd --permanent --add-port=42367/udp
+
+firewall-cmd --permanent --add-port=875/udp
+
+firewall-cmd --permanent --add-port=875/tcp
+
+firewall-cmd --permanent --add-port=48844/tcp
+
+firewall-cmd --permanent --add-port=48844/udp
+
+重启防火墙：systemctl restart firewalld
+
+* 重启i2node服务: service i2node restart
+
+* 如果此台机器安装了npsvr软件，重启npsvr服务，systemctl restart npsvr
+
+* 查看防火墙规则，执行firewall-cmd --list-all
+
+[root@localhost zones]# firewall-cmd --list-all 
+
+public (default, active)
+
+  interfaces: eno16777736
+  
+  sources: 
+  
+  services: dhcpv6-client ssh
+  
+  ports: 48844/tcp 2049/udp 48844/udp 111/udp 875/udp 42367/tcp 875/tcp 2049/tcp 42367/udp 111/tcp
+  
+  masquerade: no
+  
+  forward-ports: 
+  
+  icmp-blocks: 
+  
+  rich rules:   
+	
+[root@localhost zones]#
+
+* 页面上添加节点和虚拟平台
+
+* 新建虚机备份任务
+
+* 新建瞬时恢复任务

@@ -47,6 +47,8 @@
 * [应用高可用（High Availability）](i2availability/README.md)
   * [添加应用高可用规则](i2availability/new_ha_rep.md)
   * [应用高可用规则列表](i2availability/ha_management.md)
+  * [服务器池](i2availability/ha_cls_pool.md)
+  * [标签](i2availability/ha_service_label.md)
 * [NAS同步规则](coopy_cdp/nas_sync.md)
 * [全服务器保护](full_server_protected/README.md)
   * [全服务器迁移](full_server_protected/move.md)
