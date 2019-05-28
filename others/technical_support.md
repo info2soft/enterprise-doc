@@ -4,4 +4,4 @@
 
 Email 地 址：[support@info2soft.com](/mailto:support@info2soft.com)
 
-联 系 电 话：  **400-6178-601** 。
+联 系 电 话：  **400-0078-655** 。
