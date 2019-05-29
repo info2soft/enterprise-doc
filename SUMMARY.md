@@ -1,4 +1,5 @@
 # Summary
+
 * [i2灾备软件用户使用手册](README.md)
 * [软件概览](introduction/introduction.md)
   * [系统架构](introduction/system_architecture.md)
@@ -19,13 +20,13 @@
   * [配置备份](system_management/cc_backup_restore.md)
   * [操作日志](system_management/log_management.md)
 * [资源管理](resource_management/README.md)
-  * [组别管理](resource_management/groupmanagement.md)
   * [节点管理](resource_management/node_mangement.md)
+  * [业务组管理](resource_management/groupmanagement.md)
   * [节点监控](resource_management/node_monitor.md)
   * [文件认证机制](resource_management/file_authentication_mechanism.md)
   * [集群管理](mscs/README.md)
   * [存储管理](resource_management/storage_management.md)
-  * [虚拟平台](virtual_platform/add_vp.md)  
+  * [虚拟平台](virtual_platform/add_vp.md)
 * [模板管理](template_management/README.md)
   * [虚机备份模板](template_management/vp_backup_temp.md)
   * [虚机复制模板](template_management/vp_rep_temp.md)
@@ -33,7 +34,7 @@
   * [全服务还原模板](template_management/fsp_restore_temp.md)
   * [备份模板](template_management/backup_temp.md)
   * [复制规则模板](template_management/rep_temp.md)
-* [数据的备份与恢复](coopy_cdp/README.md)
+* [规则管理](coopy_cdp/README.md)
   * [创建复制规则](coopy_cdp/new_rep.md)
   * [复制规则高级属性](coopy_cdp/advance_settings.md)
   * [恢复管理](coopy_cdp/recovery_management.md)
@@ -71,3 +72,5 @@
   * [常见错误排查](appendix/troubleshooting.md)
   * [英方软件错误代码说明](appendix/error_code.md)
   * [工作机（生产机）数据变化量诊断工具](appendix/command_tools.md)
+  * [数据库转换](appendix/db_convert.md)
+
