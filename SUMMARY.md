@@ -58,6 +58,7 @@
     * [块设备备份](i2backup/backup_blk.md)
     * [oracle备份](i2backup/backup_oracle.md)
     * [mssql server备份](i2backup/backup_mssql.md)
+    * [db2备份](i2backup/db2bei-fen.md)
   * [还原](i2backup/restore.md)
 * [统计报表](statistics/README.md)
   * [备份统计](statistics/backup.md)

@@ -8,7 +8,7 @@
 ln -s /usr/local/sdata/lib/libobk.so $ORACLE_HOME/lib/libobk.so
 
 
-### 备份管理-&gt;备份-&gt;基本设置
+### 定时管理-&gt;备份-&gt;基本设置
 *   “启用模板”： 客户可以选择自己已经保存的模板，便于节省时间；
 *   “备份名称”：备份规则的名字可按照自己的习惯填写
 *   “工作机”：系统自动列出该用户创建的所有工作机节点和混合节点
@@ -19,14 +19,16 @@ ln -s /usr/local/sdata/lib/libobk.so $ORACLE_HOME/lib/libobk.so
 源类型与目标类型的对应关系：文件-&gt;文件，文件-&gt;raw数据，块设备-&gt;文件，块设备-&gt;raw数据，oracle-&gt;文件，mssql server-&gt;文件
 
 选择 oracle-&gt;文件即oracle备份
+*   “超时阈值”：超过时间阙值还没有完成备份则产生告警
 
-![说明: 1](/assets/V7.000015.png)
+
+![说明: 1](/assets/backup06036.png)
 
 *   “灾备机目标路径”：工作机需要保护的文件或者目录将要备份到此目录下
 *   “Oracle数据库实例名“：用于响应Oracle数据库操作的数据库管理系统的名称，可通过环境变量ORACLE_SID查看
 *   “Oracle数据库Home目录”：安装Oracle软件的位置，可通过环境变量ORACLE_HOME查看
 
-### 备份管理-&gt;备份-&gt;备份内容
+### 定时管理-&gt;备份-&gt;备份内容
 
 ![说明: 1](/assets/V7.000016.png)
 
@@ -41,7 +43,7 @@ Linux上，脚本的根目录为：/etc/sdata/scripts
 
 可以在脚本根目录下，创建子目录。Windows脚本必须是以.bat或者.cmd为后缀的批处理文件；Linux脚本必须是可执行文件（必须有可执行属性）。
 
-### 备份管理-&gt;备份-&gt;备份选项
+### 定时管理-&gt;备份-&gt;备份选项
 
 ![说明: 1](/assets/V7.1.2019032504.png)
 
@@ -59,10 +61,10 @@ Linux上，脚本的根目录为：/etc/sdata/scripts
 *   “指定最高限额”：（内部保留参数，目前无效）
 *   “每个备份集文件数”：rman备份参数filesperset
 
-### 备份管理-&gt;备份-&gt;压缩加密
+### 定时管理-&gt;备份-&gt;压缩加密
 参照文件备份中压缩加密部分
 
-### 备份管理-&gt;备份-&gt;备份策略
+### 定时管理-&gt;备份-&gt;备份策略
 参照文件备份备份策略部分
 
 
