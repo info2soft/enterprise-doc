@@ -15,8 +15,8 @@
 |  | HA心跳端口 | TCP | 26850 | 高可用心跳 |
 |  | I2NAS命令控制端口 | TCP | 26873 | 工作机-&gt;灾备机，I2NAS命令控制端口|
 |  | Oracle数据库备份端口 | TCP | 26876 | 工作机-&gt;灾备机， Oracle数据库备份端口|
-| 控制机 | HTTP端口 | TCP | 58080 | HTTP端口 |
-|  | HTTPS端口 | TCP | 58086 | HTTPS端口 |
+| 控制机 | nginx端口 | TCP | 58080 | HTTP端口 |
+|  | nginx端口 | TCP | 58086 | HTTPS端口 |
 |  | I2Node Proxy端口 | TCP | 58082 | I2Node Proxy端口 |
 |  | Active Proxy端口 | TCP | 26803 | Active Proxy端口 |
 
