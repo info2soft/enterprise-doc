@@ -6,6 +6,7 @@
 * [块设备备份](backup_blk.md)
 * [oracle备份](backup_oracle.md)
 * [mssql server备份](backup_mssql.md)
+* [db2备份](backup_db2.md)
 
 **特别说明：**
 
