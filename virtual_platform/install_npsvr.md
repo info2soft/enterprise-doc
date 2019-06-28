@@ -100,9 +100,9 @@ VMware虚拟平台即VCenter/ESXI端无特殊配置。
 如果添加的Hyper-V平台是Hyper-V集群，需要在NPSVR主机的hosts文件中加上每个集群节点的域名称和对应的IP地址
 比如：
 
-192.168.77.202      hnode1.msftlearn.local
+    192.168.77.202      hnode1.msftlearn.local
 
-192.168.77.190      hnode2.msftlearn.local
+    192.168.77.190      hnode2.msftlearn.local
 
 Windows下hosts所在目录：C:\Windows\System32\drivers\etc\
 
