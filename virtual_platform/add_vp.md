@@ -14,19 +14,7 @@
 
 **注意：**
 
-添加Hyper-V虚拟平台之前，Hyper-V主机需要做如下准备工作：
-以管理员权限运行cmd，执行如下2条命令:
-
-winrm quickconfig
-
-winrm set winrm/config/service @{AllowUnencrypted="true“}
-
-防火墙，允许应用通过防火墙中勾选：Windows远程管理和Windows远程管理(兼容)，允许出入站端口：5985/5986
-
-
-**注意：**
-
-在添加Hyper-V虚拟平台的时候，会在Hyper-V主机上远程静默安装Data Agent软件，需要将Data Agent软件传输至Hyper-V主机并安装，所以添加Hyper-V平台所需时间会比添加VMware平台要长。删除虚拟平台的时候，会远程静默卸载Data Agent软件。
+在添加Hyper-V虚拟平台的时候，会在Hyper-V主机上远程静默安装Data Agent软件，需要将Data Agent软件传输至Hyper-V主机并安装，所以添加Hyper-V平台所需时间会比添加VMware平台要长。
 
 虚拟平台列表，页面如下：
 
