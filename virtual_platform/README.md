@@ -27,6 +27,7 @@ winrm set winrm/config/service @{AllowUnencrypted="true“}
 
 防火墙，允许应用-windows远程管理(兼容)，出入站端口：5985/5986
 
+对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
 
 * [NpServer部署](install_npsvr.md)
 * [虚机备份](vm_backup.md)
