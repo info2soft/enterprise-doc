@@ -17,9 +17,12 @@ i2软件提供无代理虚机备份（i2VP），无代理虚机备份为虚拟�
 
 对于Hyper-V虚拟平台，在添加虚拟平台的时候，会在Hyper-V主机上远程静默安装Data Agent软件，删除虚拟平台的时候，会远程静默卸载Data Agent软件。Data Agent软件是负责Hyper-V主机和备机之间，虚拟机数据的传输。Data Agent安装过程中需要生成系统环境变量 I2DATAAGENT，变量的值为安装目录。
 
-添加Hyper-V虚拟平台之前，Hyper-V虚拟平台需要做如下准备工作：
+添加Hyper-V虚拟平台之前，Hyper-V主机需要做如下准备工作：
+以管理员权限运行cmd，执行如下2条命令:
+winrm quickconfig
+winrm set winrm/config/service @{AllowUnencrypted="true“}
 
-
+防火墙，允许应用-windows远程管理(兼容)，出入站端口：5985/5986
 
 
 * [NpServer部署](install_npsvr.md)
