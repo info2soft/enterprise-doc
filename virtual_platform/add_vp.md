@@ -8,7 +8,7 @@
 *   “管理地址”：NpServer主机IP地址；
 *   “管理地址端口”：NpServer主机端口号，默认26823；
 *   “平台类型”： 平台类型，目前支持VMware和Hyper-V两个平台；
-*   “平台地址”：虚拟平台IP地址(可以是Vcenter或者ESXI或者Hyper-V)；
+*   “平台地址”：虚拟平台IP地址(可以是VCenter或者ESXI或者Hyper-V)；
 *   “账号”：虚机平台登录账号；
 *   “口令”：虚机平台登录密码；
 
