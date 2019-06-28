@@ -23,7 +23,7 @@ winrm set winrm/config/service @{AllowUnencrypted="true“}
 
 ![说明: 1](/assets/V.7.220190628133358.png)
 
-防火墙，允许应用-windows远程管理(兼容)，出入站端口：5985/5986
+防火墙，允许应用通过防火墙中勾选：Windows远程管理和Windows远程管理(兼容)，允许出入站端口：5985/5986
 
 
 **注意：**
