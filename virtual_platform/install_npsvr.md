@@ -86,7 +86,15 @@ rpm安装
 
 因此灾备机要有足够的磁盘空间，并且加载vddk动态库，i2VP提供独立的i2node安装包集成vddk；
 
-源机即VCenter/ESXI端无特殊配置。
+VMware虚拟平台即VCenter/ESXI端无特殊配置。
+
+添加Hyper-V虚拟平台之前，Hyper-V主机需要做如下准备工作：
+以管理员权限运行cmd，执行如下2条命令:
+winrm quickconfig
+winrm set winrm/config/service @{AllowUnencrypted="true“}
+防火墙，允许应用-windows远程管理(兼容)，出入站端口：5985/5986
+
+对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
 
 * ### Windows {#vddk}
 
