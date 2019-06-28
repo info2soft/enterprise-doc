@@ -89,13 +89,13 @@ VMware虚拟平台即VCenter/ESXI端无特殊配置。
 
 添加Hyper-V虚拟平台之前，Hyper-V主机需要做如下准备工作：
 
-以管理员权限运行cmd，执行如下2条命令:
+    以管理员权限运行cmd，执行如下2条命令:
 
-winrm quickconfig
+    winrm quickconfig
 
-winrm set winrm/config/service @{AllowUnencrypted="true“}
+    winrm set winrm/config/service @{AllowUnencrypted="true“}
 
-防火墙，允许应用通过防火墙中勾选：Windows远程管理和Windows远程管理(兼容)，允许出入站端口：5985/5986
+    防火墙，允许应用通过防火墙中勾选：Windows远程管理和Windows远程管理(兼容)，允许出入站端口：5985/5986
 
 如果添加的Hyper-V平台是Hyper-V集群，需要在NPSVR主机的hosts文件中加上每个集群节点的域名称和对应的IP地址
 比如：
