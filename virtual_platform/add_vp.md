@@ -12,7 +12,7 @@
 *   “账号”：虚机平台登录账号；
 *   “口令”：虚机平台登录密码；
 
-注意：在添加Hyper-V虚拟平台的时候，会在Hyper-V主机上远程静默安装Data Agent软件，需要将Data Agent软件传输至Hyper-V主机并安装，所以添加Hyper-V平台所需时间会比添加VMware平台要长。在删除Hyper-V虚拟平台的时候，会在Hyper-V主机上远程静默卸载Data Agent软件。
+注意：在添加Hyper-V虚拟平台的时候，会在Hyper-V主机上远程静默安装Data Agent软件，需要将Data Agent软件传输至Hyper-V主机并安装，所以添加Hyper-V平台所需时间会比添加VMware平台要长。删除虚拟平台的时候，会远程静默卸载Data Agent软件。
 
 虚拟平台列表，页面如下：
 
