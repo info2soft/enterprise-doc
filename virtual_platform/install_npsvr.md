@@ -28,11 +28,11 @@ NPSVR以文件方式保存规则信息和注册的虚拟化平台信息，在NPS
 
 ![说明: 5](/assets/V7.020190107192944.png)
 
-安装完成后确认Npsvr服务是否处于运行状态，并确认版本号信息。
+安装完成后确认NPSVR服务是否处于运行状态，并确认版本号信息。
 
 **注意：**
 
-Npsvr默认使用端口26823与esxi的web service通信，确保npsvr所使用的端口可以被防火墙放行。
+NPSVR默认使用端口26823与esxi的web service通信，确保npsvr所使用的端口可以被防火墙放行。
 
 * ### Windows卸载 {#windows-0}
 
@@ -46,7 +46,7 @@ Npsvr默认使用端口26823与esxi的web service通信，确保npsvr所使用�
 
 **注意：**
 
-卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
+卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
 * ### Linux {#linux}
 
@@ -76,8 +76,7 @@ rpm安装
 
 **注意：**
 
-卸载Npsvr后会保留一些配置信息文件；如无保留的必要性请手动删除。
-
+卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
 
 ## 灾备机部署 {#vddk}
@@ -97,6 +96,17 @@ winrm quickconfig
 winrm set winrm/config/service @{AllowUnencrypted="true“}
 
 防火墙，允许应用通过防火墙中勾选：Windows远程管理和Windows远程管理(兼容)，允许出入站端口：5985/5986
+
+如果添加的Hyper-V平台是Hyper-V集群，需要在NPSVR主机的hosts文件中加上每个集群节点的域名称和对应的IP地址
+比如：
+
+192.168.77.202      hnode1.msftlearn.local
+
+192.168.77.190      hnode2.msftlearn.local
+
+Windows下hosts所在目录：C:\Windows\System32\drivers\etc\
+
+Linux下hosts所在目录：/etc/
 
 对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
 
