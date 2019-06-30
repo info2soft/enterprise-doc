@@ -260,7 +260,30 @@
 | 6110 | 创建或挂载NFS存储失败 |    |   |
 | 6111 | 删除或卸载数据存储失败 |   |   |
 | --- | --- | --- | --- |
-
-
+| 12001 | HA cluster peerinfo is invalid | | |
+| 12002 | HA cluster app callback is exist | | |
+| 12003 | HA cluster app callback is not exist | | |
+| 12004 | HA cluster alloc memory failed | | |
+| 12005 | HA cluster node need stop | | |
+| 12006 | HA cluster node need config | | |
+| 12007 | HA cluster fail to lanuch a new thread | | |
+| 12008 | HA cluster want to send a empty data | | |
+| 12009 | HA cluster RPC-IPC busy | | |
+| 12010 | HA cluster NODE-IPC busy | | |
+| 12011 | HA cluster change to invalid status | | |
+| 12012 | HA cluster change from invalid status | | |
+| 12013 | HA cluster change to invalid role | | |
+| 12014 | HA cluster rule is exist | | |
+| 12015 | HA cluster rule is not exist | | |
+| 12016 | HA cluster rule insert failed | | |
+| 12017 | HA cluster rule delete failed | | |
+| 12018 | HA cluster info list is stale | | |
+| 12019 | HA cluster Receive Rpcdata is NULL | | |
+| 12020 | HA cluster requst HA sevice failed by task busy | | |
+| 12021 | HA cluster requst HA sevice failed by timeout | | |
+| 12022 | HA cluster requst HA sevice failed by service not found | | |
+| 12023 | HA cluster get a invalid returned data | | |
+| 12024 | HA cluster get a local provider info, but nothing | | |
+| --- | --- | --- | --- |
 
 

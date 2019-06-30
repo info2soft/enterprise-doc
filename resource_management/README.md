@@ -7,3 +7,5 @@
 * [集群管理](/mscs/README.md)
 * [存储管理](storage_management.md)
 * [虚拟平台](/virtual_platform/add_vp.md)
+* [对象存储](dto_storage.md)
+* [DTO主机](dto_sync_host.md)
