@@ -10,15 +10,16 @@
 |  | 镜像端口 | TCP | 26832 | 工作机-&gt;灾备机 |
 |  | 复制端口 | TCP | 26833 | 工作机-&gt;灾备机 |
 |  | 恢复端口 | TCP | 26831 | 工作机-&gt;灾备机 |
-|  | SQLServer数据库备份端口 | TCP | 26834 | 工作机-&gt;灾备机， SQLServer数据库备份端口|
 |  | HA服务端口 | TCP | 26868 | 高可用控制及仲裁 |
 |  | HA心跳端口 | TCP | 26850 | 高可用心跳 |
 |  | I2NAS命令控制端口 | TCP | 26873 | 工作机-&gt;灾备机，I2NAS命令控制端口|
 |  | Oracle数据库备份端口 | TCP | 26876 | 工作机-&gt;灾备机， Oracle数据库备份端口|
+|  | SQLServer数据库备份端口 | TCP | 26834 | 工作机-&gt;灾备机， SQLServer数据库备份端口|
+|  | DB2数据库备份端口 | TCP | 26887 | 工作机-&gt;灾备机， DB2数据库备份端口|
 | DTO同步主机 | RPC 服务端口  | TCP | 26824 | 控制机->同步主机 |
 | 控制机 | HTTP端口 | TCP | 58080 | HTTP端口 |
 |  | HTTPS端口 | TCP | 58086 | HTTPS端口 |
-|  | I2Node Proxy端口 | TCP | 58082 | I2Node Proxy端口 |
+|  | CCProxy端口 | TCP | 58082 | CCProxy端口 |
 |  | Active Proxy端口 | TCP | 26803 | Active Proxy端口 |
 
 

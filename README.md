@@ -78,6 +78,7 @@ Information2 Software i2UP Manual
     * [块设备备份](i2backup/backup_blk.md)
     * [oracle备份](i2backup/backup_oracle.md)
     * [mssql server备份](i2backup/backup_mssql.md)
+    * [db2备份](i2backup/backup_db2.md)
   * [还原](i2backup/restore.md)
 * [DTrack](dtrack/README.md)
    * [存储管理](dtrack/storage_info.md)

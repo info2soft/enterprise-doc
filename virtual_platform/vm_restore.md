@@ -91,7 +91,7 @@
 
 3.NpServer下发信息，让灾备机将备份数据发给fuse，之后fuse独立运行，直接将数据写入到新虚拟机磁盘中；
 
-瞬时恢复目前只支持灾备机为RHEL或CENTOS 6.5 64位以上操作系统，但不支持RHEL或CENTOS7;
+瞬时恢复目前只支持灾备机为RHEL或CENTOS 6.5 64位以上操作系统;
 
 由于受到NFS挂载的限制，瞬时恢复的虚机只支持精简置备，不管源虚机是什么磁盘类型；
 
@@ -160,7 +160,7 @@ nfsdir=/root/disk/nfs
 
 * 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
 
-由于nfs服务需要开启 mountd, nfs, nlockmgr, portmapper, rquotad这5个服务，需要将这5个服务的端口加到iptables里面。而nfs和portmapper两个服务是固定端口的，nfs为2049，portmapper为111，其他的3个服务是用的随机端口，那就需要先把这3个服务的端口设置成固定的，用命令rpcinfo -p 查看当前这5个服务的端口，并记录下来。
+由于nfs服务需要开启 mountd, nfs, nlockmgr, portmapper, rquotad这5个服务，需要将这5个服务的端口加到iptables里面。而nfs和portmapper两个服务是固定端口的，nfs为2049，portmapper为111，其他的3个服务是用的随机端口，那就需要先把这3个服务的端口设置成固定的，用命令rpcinfo -p 查看当前这5个服务的端口，并记录下来。 
 
 nfs 2049, portmapper 111, mountd 42367, rquotad 875,nlockmgr 48844
 
@@ -228,8 +228,7 @@ MOUNTD_PORT=42367
 
 ![说明: 1](/assets/esxi-platform.png)
 
-
-** 注意 **
+**注意**
 
 如果执行df -h命令后，结果没有出现fuse_start那一行，可能需要手动启动一下fuse
 
@@ -343,19 +342,19 @@ firewall-cmd --permanent --add-port=48844/udp
 public (default, active)
 
   interfaces: eno16777736
-  
+
   sources: 
-  
+
   services: dhcpv6-client ssh
-  
+
   ports: 48844/tcp 2049/udp 48844/udp 111/udp 875/udp 42367/tcp 875/tcp 2049/tcp 42367/udp 111/tcp
-  
+
   masquerade: no
-  
+
   forward-ports: 
-  
+
   icmp-blocks: 
-  
+
   rich rules:   
 	
 [root@localhost zones]#

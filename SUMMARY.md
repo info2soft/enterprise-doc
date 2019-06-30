@@ -66,6 +66,7 @@
     * [块设备备份](i2backup/backup_blk.md)
     * [oracle备份](i2backup/backup_oracle.md)
     * [mssql server备份](i2backup/backup_mssql.md)
+    * [db2备份](i2backup/backup_db2.md)
   * [还原](i2backup/restore.md)
 * [DTO](dto/README.md)
   * [DTO规则](dto/dto_rule.md)
