@@ -176,6 +176,8 @@ ESXI无法打开虚拟硬件版本高于其支持版本的虚拟机的电源。
 
 关于Hyper-V版本支持的说明:
 
-目前支持的Hyper-V版本：Windows 2016和Windows 2019；
+目前支持的Hyper-V版本：
+
+Windows 2016和Windows 2019；
 
 Windows 2012 R2 只支持全备。
