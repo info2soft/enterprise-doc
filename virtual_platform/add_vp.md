@@ -15,10 +15,16 @@
 *   “许可”：虚拟平台的许可；
 *   “备注”：虚拟平台的备注；
 
-
 **注意：**
 
-在添加Hyper-V虚拟平台的时候，会在Hyper-V主机上远程静默安装Data Agent软件，需要将Data Agent软件传输至Hyper-V主机并安装，所以添加Hyper-V平台所需时间会比添加VMware平台要长。
+假如Hyper-V虚拟平台添加成功，但是Hyper-V主机上data agent安装失败，在新建规则后，规则启动时会去检查一次data agent是否已经安装，如果没有安装则再安装一次，这次如果安装失败，则规则停止，并在日志中说明data agent没有安装，此时需要手动在Hyper-V主机上安装data agent。
+
+NPSVR安装完成之后，data agent存放在如下路径：
+
+Linux系统：/usr/local/sdata/npsvr/package/
+
+Windows系统：C:\\Program Files\\Info2soft's NoProxy Server\\package
+
 
 虚拟平台列表，页面如下：
 
