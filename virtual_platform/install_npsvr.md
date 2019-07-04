@@ -72,7 +72,7 @@ rpm安装
 
 打开终端或使用xshell连接到主机，使用rpm –e命令进行NPSVR的卸载：
 
-[root@localhost /]# rpm -e rpm -e info2soft-npsvr-7.1.2-28618.x86_64
+[root@localhost /]# rpm -e info2soft-npsvr-7.1.2-28618.x86_64
 
 **注意：**
 
