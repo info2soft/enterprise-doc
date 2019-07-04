@@ -18,6 +18,8 @@
 **注意：**
 
 假如Hyper-V虚拟平台添加成功，但是Hyper-V主机上data agent安装失败，在新建规则后，规则启动时会去检查一次data agent是否已经安装，如果没有安装则再安装一次，这次如果安装失败，则规则停止，并在日志中说明data agent没有安装，此时需要手动在Hyper-V主机安装data agent。
+Linux系统data agent存放路径：/usr/local/sdata/npsvr/package/
+Winodows系统C:\\Program Files\\Info2soft's NoProxy Server\\package
 
 虚拟平台列表，页面如下：
 
