@@ -84,6 +84,8 @@ rpm安装
 
 因此灾备机要有足够的磁盘空间，并且加载vddk动态库，i2VP提供独立的i2node安装包集成vddk；
 
+对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
+
 * ### Windows {#vddk}
 
 支持的Windows操作系统是Windows 64位操作系统；
@@ -131,8 +133,6 @@ VMware虚拟平台即VCenter/ESXI端无特殊配置。
 Windows下hosts所在目录：C:\Windows\System32\drivers\etc\
 
 Linux下hosts所在目录：/etc/
-
-对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
 
 
 **注意：**
