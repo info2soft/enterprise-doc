@@ -78,32 +78,6 @@ rpm安装
 
 卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
-## 虚拟平台部署 {#platform}
-
-VMware虚拟平台即VCenter/ESXI端无特殊配置。
-
-添加Hyper-V虚拟平台之前，Hyper-V主机需要做如下准备工作：
-
-    以管理员权限运行cmd，执行如下2条命令:
-
-    winrm quickconfig
-
-    winrm set winrm/config/service @{AllowUnencrypted="true“}
-
-    防火墙，允许应用通过防火墙中勾选：Windows远程管理和Windows远程管理(兼容)，允许出入站端口：5985/5986
-
-如果添加的Hyper-V平台是Hyper-V集群，需要在NPSVR主机的hosts文件中加上每个集群节点的域名和ip地址，比如：
-
-    192.168.77.202      hnode1.msftlearn.local
-
-    192.168.77.190      hnode2.msftlearn.local
-
-Windows下hosts所在目录：C:\Windows\System32\drivers\etc\
-
-Linux下hosts所在目录：/etc/
-
-对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
-
 ## 灾备机部署 {#vddk}
 
 当虚机快照建立完成以后，灾备机与ESXI平台通信请求读取虚机的磁盘文件，备份传输到本地磁盘上，以VMDK形式保存；
@@ -133,6 +107,32 @@ Linux下hosts所在目录：/etc/
 ![](/assets/V7.120190404151532.png)
 
 安装完成以后，检查/usr/lib/vmware-vix-disklib/目录；
+
+## 虚拟平台部署 {#platform}
+
+VMware虚拟平台即VCenter/ESXI端无特殊配置。
+
+添加Hyper-V虚拟平台之前，Hyper-V主机需要做如下准备工作：
+
+    以管理员权限运行cmd，执行如下2条命令:
+
+    winrm quickconfig
+
+    winrm set winrm/config/service @{AllowUnencrypted="true“}
+
+    防火墙，允许应用通过防火墙中勾选：Windows远程管理和Windows远程管理(兼容)，允许出入站端口：5985/5986
+
+如果添加的Hyper-V平台是Hyper-V集群，需要在NPSVR主机的hosts文件中加上每个集群节点的域名和ip地址，比如：
+
+    192.168.77.202      hnode1.msftlearn.local
+
+    192.168.77.190      hnode2.msftlearn.local
+
+Windows下hosts所在目录：C:\Windows\System32\drivers\etc\
+
+Linux下hosts所在目录：/etc/
+
+对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
 
 
 **注意：**
