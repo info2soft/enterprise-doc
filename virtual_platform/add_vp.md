@@ -21,9 +21,9 @@
 
 NPSVR安装完成之后，data agent存放在如下路径：
 
-Linux系统data agent存放路径：/usr/local/sdata/npsvr/package/
+Linux系统：/usr/local/sdata/npsvr/package/
 
-Winodows系统data agent存放路径：C:\\Program Files\\Info2soft's NoProxy Server\\package
+Windows系统：C:\\Program Files\\Info2soft's NoProxy Server\\package
 
 
 虚拟平台列表，页面如下：
