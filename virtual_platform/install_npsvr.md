@@ -130,7 +130,7 @@ VMware虚拟平台即VCenter/ESXI端无特殊配置。
 
     192.168.77.190      hnode2.msftlearn.local
 
-Windows下hosts所在目录：C:\Windows\System32\drivers\etc\
+Windows下hosts所在目录：C:\\Windows\\System32\\drivers\\etc\\
 
 Linux下hosts所在目录：/etc/
 
