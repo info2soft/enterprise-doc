@@ -21,7 +21,7 @@
 
 Linux系统data agent存放路径：/usr/local/sdata/npsvr/package/
 
-Winodows系统t存放路径：C:\\Program Files\\Info2soft's NoProxy Server\\package
+Winodows系统data agent存放路径：C:\\Program Files\\Info2soft's NoProxy Server\\package
 
 
 虚拟平台列表，页面如下：
