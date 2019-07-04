@@ -80,8 +80,6 @@ rpm安装
 
 ## 虚拟平台部署 {#platform}
 
-
-
 VMware虚拟平台即VCenter/ESXI端无特殊配置。
 
 添加Hyper-V虚拟平台之前，Hyper-V主机需要做如下准备工作：
