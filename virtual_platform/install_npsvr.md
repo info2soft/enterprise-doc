@@ -78,12 +78,9 @@ rpm安装
 
 卸载NPSVR后会保留一些配置信息文件；如无保留的必要性请手动删除。
 
+## 虚拟平台部署 {#platform}
 
-## 灾备机部署 {#vddk}
 
-当虚机快照建立完成以后，灾备机与ESXI平台通信请求读取虚机的磁盘文件，备份传输到本地磁盘上，以VMDK形式保存；
-
-因此灾备机要有足够的磁盘空间，并且加载vddk动态库，i2VP提供独立的i2node安装包集成vddk；
 
 VMware虚拟平台即VCenter/ESXI端无特殊配置。
 
@@ -108,6 +105,12 @@ Windows下hosts所在目录：C:\Windows\System32\drivers\etc\
 Linux下hosts所在目录：/etc/
 
 对于Hyper-V虚拟平台，灾备机使用端口26835用于数据传输。
+
+## 灾备机部署 {#vddk}
+
+当虚机快照建立完成以后，灾备机与ESXI平台通信请求读取虚机的磁盘文件，备份传输到本地磁盘上，以VMDK形式保存；
+
+因此灾备机要有足够的磁盘空间，并且加载vddk动态库，i2VP提供独立的i2node安装包集成vddk；
 
 * ### Windows {#vddk}
 
@@ -173,6 +176,6 @@ ESXI无法打开虚拟硬件版本高于其支持版本的虚拟机的电源。
 
 关于Hyper-V版本支持的说明:
 
-目前支持的Hyper-V版本：Windows 2016和Windows 2019
+目前支持的Hyper-V版本：Windows 2016和Windows 2019；
 
-Windows 2012 R2 只支持全备，同时要求备份的虚机没有快照，否则会备份失败。
+Windows 2012 R2 只支持全备。
