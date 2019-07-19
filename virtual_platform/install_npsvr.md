@@ -92,10 +92,6 @@ rpm安装
 
 双击安装info2soft-i2node-fori2vp-7.\*.\*.\*\*\*\*\*\(x64\).exe文件；
 
-安装完成以后进入bin目录检查vddk库文件是否存在；
-
-![](/assets/V7.020190107194722.png)
-
 * ### Linux {#vddk}
 
 支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
@@ -108,7 +104,6 @@ rpm安装
 
 ![](/assets/V7.120190404151532.png)
 
-安装完成以后，检查/usr/lib/vmware-vix-disklib/目录；
 
 ## 虚拟平台部署 {#platform}
 
