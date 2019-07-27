@@ -92,10 +92,6 @@ rpm安装
 
 双击安装info2soft-i2node-fori2vp-7.\*.\*.\*\*\*\*\*\(x64\).exe文件；
 
-安装完成以后进入bin目录检查vddk库文件是否存在；
-
-![](/assets/V7.020190107194722.png)
-
 * ### Linux {#vddk}
 
 支持的Linux操作系统是RHEL或CENTOS 6.5 64位以上；
@@ -108,7 +104,6 @@ rpm安装
 
 ![](/assets/V7.120190404151532.png)
 
-安装完成以后，检查/usr/lib/vmware-vix-disklib/目录；
 
 ## 虚拟平台部署 {#platform}
 
@@ -181,3 +176,6 @@ ESXI无法打开虚拟硬件版本高于其支持版本的虚拟机的电源。
 Windows 2016和Windows 2019；
 
 Windows 2012 R2 只支持全备。
+
+高版本平台上的虚拟机不能恢复到低版本平台上。
+
