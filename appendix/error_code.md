@@ -259,6 +259,13 @@
 | 6109 | 虚拟机CBT配置错误 |        |   |
 | 6110 | 创建或挂载NFS存储失败 |    |   |
 | 6111 | 删除或卸载数据存储失败 |   |   |
+| 6113 | 虚机的磁盘路径及名称有冲突，请指定不同的名称或者路径 |   |   |
+| 6114 | 在HyperV主机端安装data agent失败。更多信息请查看NPSVR端日志 |   |   |
+| 6115 | 不支持的虚拟机平台类型，目前只支持VMWare和HyperV平台 |   |   |
+| 6116 | 无法获取虚拟机所在的主机 |   |   |
+| 6117 | 不支持的HyperV虚拟机平台。目前只支持Windows Server 2012 R2及以上版本的HyperV虚拟机平台 |   |   |
+| 6118 | 虚拟机有快照。针对Windows Server 2012 R2上的HyperV虚拟机，只支持无快照的虚拟机备份，且只支持全备 |   |   |
+| 6119 | 注册虚拟平台时验证失败。请确保用户名和密码正确无误。用户名必须是本地管理员组的成员。如果没有启用windows远程管理，请在管理员权限下运行的Windows命令提示符中输入以下命令: "winrm quickconfig"，并按要求进行配置。对于非SSL连接，将“AllowUnencrypted”权限设置为true的命令为: "winrm set winrm/config/service @{AllowUnencrypted="true"}"。 在群集环境中，确保所有节点都满足上述要求 |   |   |
 | --- | --- | --- | --- |
 | 12001 | HA cluster peerinfo is invalid | | |
 | 12002 | HA cluster app callback is exist | | |
