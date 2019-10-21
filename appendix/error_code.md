@@ -266,7 +266,21 @@
 | 6117 | 不支持的HyperV虚拟机平台。目前只支持Windows Server 2012 R2及以上版本的HyperV虚拟机平台 |   |   |
 | 6118 | 虚拟机有快照。针对Windows Server 2012 R2上的HyperV虚拟机，只支持无快照的虚拟机备份，且只支持全备 |   |   |
 | 6119 | 注册虚拟平台时验证失败。请确保用户名和密码正确无误。用户名必须是本地管理员组的成员。如果没有启用windows远程管理，请在管理员权限下运行的Windows命令提示符中输入以下命令: "winrm quickconfig"，并按要求进行配置。对于非SSL连接，将“AllowUnencrypted”权限设置为true的命令为: "winrm set winrm/config/service @{AllowUnencrypted="true"}"。 在群集环境中，确保所有节点都满足上述要求 |   |   |
-| --- | --- | --- | --- |
+| 6120 | HyperV主机未安装数据代理 |             |   |
+| 6121 | 在HyperV主机端创建目录失败 |             |   |
+| 6122 | VMWare磁盘整合失败 |             |   |
+| 6123 | 磁盘空间不足 |             |   |
+| 6124 | 目标端HyperV主机的版本太低 |             |   |
+| 6136 | 创建虚拟网关失败 |             |   |
+| 6137 | 创建端口组失败 |             |   |
+| 6138 | 虚拟网关已经存在 |             |   |
+| 6139 | 端口组已经存在 |             |   |
+| 6140 | 上传文件失败 |             |   |
+| 6141 | 演练中瞬时恢复虚机失败 |             |   |
+| 6142 | 演练中执行脚本失败 |             |   |
+| 6143 | IP地址无法连接上 |             |   |
+| 6144 | 演练平台配置出错 |             |   |
+-- | --- | --- | --- |
 | 12001 | HA cluster peerinfo is invalid | | |
 | 12002 | HA cluster app callback is exist | | |
 | 12003 | HA cluster app callback is not exist | | |
