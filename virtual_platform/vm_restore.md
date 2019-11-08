@@ -164,7 +164,7 @@ rpcbind 一定要在 nfs 之前启动，否则 nfs 可能会起不来。
 
 修改nfs共享目录，假设nfs的共享目录为/sdb1/nfs
 
-* 修改/etc/exports文件如下：
+修改/etc/exports文件如下：
 
 [root@localhost /]# vi /etc/exports
 
