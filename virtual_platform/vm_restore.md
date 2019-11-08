@@ -247,7 +247,7 @@ MOUNTD_PORT=42367
 
 灾备机是Centos7时，只有防火墙这一步与Centos6.5不一样，差异如下：
 
-* 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
+防火墙不能屏蔽对nfs的执行，否则esxi上无法挂载nfs存储。
 
 由于nfs服务需要开启 mountd, nfs, nlockmgr, portmapper, rquotad这5个服务，需要将这5个服务的端口加到iptables里面。而nfs和portmapper两个服务是固定端口的，nfs为2049，portmapper为111，其他的3个服务是用的随机端口，那就需要先把这3个服务的端口设置成固定的，用命令rpcinfo -p 查看当前这5个服务的端口，并记录下来。  
 
