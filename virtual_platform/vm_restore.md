@@ -216,7 +216,7 @@ MOUNTD_PORT=42367
 
 ![说明: 1](/assets/20190404125335.png)
 
-重启防火墙：service iptables restart
+* 重启防火墙：service iptables restart
 
 * 重启i2node服务，service i2node restart
 
