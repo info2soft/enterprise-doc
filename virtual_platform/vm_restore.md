@@ -153,41 +153,31 @@ Hyper-V平台，瞬时恢复注意事项：
 
 **灾备机是Centos6.5_64bit操作系统**
 
-* yum install fuse fuse\* fuse-\*
-* yum install nfs nfs\*
-* yum install rpcbind
+灾备机端安装启动nfs服务
+* yum install rpcbind 
+
+* yum install nfs-utils
+
+* yum install fuse-libs
+
 * /etc/init.d/rpcbind start
+
 * /etc/init.d/nfs start
-* 新建目录/root/disk/nfs，作为nfs共享的目录
-* chown -R nfsnobody:nfsnobody /root/disk/nfs
+
+rpcbind 一定要在 nfs 之前启动，否则 nfs 可能会起不来。
+
+修改nfs共享目录，假设nfs的共享目录为/sdb1/nfs
+
 * 修改/etc/exports文件如下：
 
-[root@localhost /]# cat /etc/exports
+[root@localhost /]# vi /etc/exports
 
-/root/disk/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
+/sdb1/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
 
-其中“/root/disk/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
+其中“/sdb1/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
 
+重启nfs服务
 * /etc/init.d/nfs restart
-* 新建目录/root/disk/tmp，用来存放新建的虚拟机
-* chown -R nfsnobody:nfsnobody /root/disk/tmp
-* 检查/usr/local/sdata/sbin目录下是否有fuse_start文件
-* 检查/usr/local/sdata/scripts目录下是否有fuse_script.sh文件
-* 修改/etc/sdata/system.conf文件(如果文件不存在，则新建system.conf文件)
-
-文件中存放三个变量：fuse_script, tmpdir, nfsdir三者缺一不可。
-
-[root@localhost sdata]# cat system.conf
-
-fuse_script=/usr/local/sdata/scripts/fuse_script.sh
-
-tmpdir=/root/disk/tmp
-
-nfsdir=/root/disk/nfs
-
-其中“fuse_script”表示的是脚本执行路径，“tmpdir”是实际存储的虚拟机的位置，“nfsdir”实际上是fuse将tmpdir映射到nfsdir，并且nfsdir目录是nfs目录，nfsdir路径中的目录需要与/etc/exports中的目录对应上。
-
-* service i2node restart
 
 * 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
 
