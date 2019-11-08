@@ -155,13 +155,9 @@ Hyper-V平台，瞬时恢复注意事项：
 
 灾备机端安装启动nfs服务
 * yum install rpcbind
-
 * yum install nfs-utils
-
 * yum install fuse-libs
-
 * /etc/init.d/rpcbind start
-
 * /etc/init.d/nfs start
 
 rpcbind 一定要在 nfs 之前启动，否则 nfs 可能会起不来。
@@ -233,7 +229,7 @@ MOUNTD_PORT=42367
 
 * 页面上添加节点和虚拟平台
 
-* 新建虚机备份任务
+* 新建虚机备份任务，高级设置中勾选“支持瞬时恢复”
 
 ![说明: 1](/assets/V7.120190404153244.png)
 
@@ -241,74 +237,15 @@ MOUNTD_PORT=42367
 
 ![说明: 1](/assets/V7.120190404153310.png)
 
-* 灾备机：
 
-![说明: 1](/assets/20190404125302.png)
 
-* esxi平台：
 
-![说明: 1](/assets/esxi-platform.png)
 
-**注意**
-
-如果执行df -h命令后，结果没有出现fuse_start那一行，可能需要手动启动一下fuse
-
-先执行cd /usr/local/sdata/scripts
-
-然后执行./fuse_script.sh 0 /root/disk/tmp/ /root/disk/nfs
-
-执行结果中出现:
-
-fuse: mountpoint is not empty
-
-fuse: if you are sure this is safe, use the 'nonempty' mount option
-
-fuse_main returned 1
-
-说明用fuse_script.sh没有启动fuse
-
-此时执行/usr/local/sdata/sbin/fuse_start -o nonempty /root/disk/tmp /root/disk/nfs
-
-再执行df -h命令，应该会出现fuse_start那一行
 
 
 **灾备机是Centos7.0_64bit操作系统**
 
-* yum install fuse fuse\* fuse-\*
-* yum install nfs nfs\*
-* yum install rpcbind
-* systemctl start rpcbind
-* systemctl start nfs 
-* 新建目录/root/disk/nfs，作为nfs共享的目录
-* chown -R nfsnobody:nfsnobody /root/disk/nfs
-* 修改/etc/exports文件如下：
-
-[root@localhost /]# cat /etc/exports
-
-/root/disk/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
-
-其中“/root/disk/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
-
-* systemctl restart nfs
-* 新建目录/root/disk/tmp，用来存放新建的虚拟机
-* chown -R nfsnobody:nfsnobody /root/disk/tmp
-* 检查/usr/local/sdata/sbin目录下是否有fuse_start文件
-* 检查/usr/local/sdata/scripts目录下是否有fuse_script.sh文件
-* 修改/etc/sdata/system.conf文件(如果文件不存在，则新建system.conf文件)
-
-文件中存放三个变量：fuse_script, tmpdir, nfsdir三者缺一不可。
-
-[root@localhost sdata]# cat system.conf
-
-fuse_script=/usr/local/sdata/scripts/fuse_script.sh
-
-tmpdir=/root/disk/tmp
-
-nfsdir=/root/disk/nfs
-
-其中“fuse_script”表示的是脚本执行路径，“tmpdir”是实际存储的虚拟机的位置，“nfsdir”实际上是fuse将tmpdir映射到nfsdir，并且nfsdir目录是nfs目录，nfsdir路径中的目录需要与/etc/exports中的目录对应上。
-
-* service i2node restart
+灾备机是Centos7时，只有防火墙这一步与Centos6.5不一样，差异如下：
 
 * 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
 
@@ -380,8 +317,3 @@ public (default, active)
 	
 [root@localhost zones]#
 
-* 页面上添加节点和虚拟平台
-
-* 新建虚机备份任务
-
-* 新建瞬时恢复任务
