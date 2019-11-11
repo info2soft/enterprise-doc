@@ -93,23 +93,40 @@
 
 ## 瞬时恢复
 
-瞬时恢复与虚机恢复相比，不会将备份数据写入到新虚机磁盘，当创建了一台空磁盘虚机并启动后，新的虚机会去读取备份数据，进行启动和显示，当写入新数据后，将写入的数据写入到新虚机中；
+瞬时恢复与虚机恢复相比，直接使用备份的vmdk文件创建虚拟机；
 
-新建一个瞬时恢复，流程如下：
+VMware平台，新建一个瞬时恢复，流程如下：
 
-1.NpServer让灾备机启动fuse和nfs；
+1. 灾备机启动nfs服务；
 
-2.NpServer将nfs挂载到ESXI并创建虚拟机；
+2. NpServer将nfs挂载到ESXI并直接使用备份的vmdk文件创建虚拟机，所以备份的路径必须选择nfs共享目录或者nfs共享目录子目录，同时高级设置中勾选“支持瞬时恢复”。
 
-3.NpServer下发信息，让灾备机将备份数据发给fuse，之后fuse独立运行，直接将数据写入到新虚拟机磁盘中；
+VMware平台，瞬时恢复注意事项：
 
-瞬时恢复目前只支持灾备机为RHEL或CENTOS 6.5 64位以上操作系统;
+瞬时恢复的虚机在ESXI上不能直接删除，只能使用取消注册(或者从清单中移除)，如果直接删除，则会将备份目录的vmdk文件删除，从而导致备份数据不可以再使用。
 
-由于受到NFS挂载的限制，瞬时恢复的虚机只支持精简置备，不管源虚机是什么磁盘类型；
+VMware平台，瞬时恢复目前只支持灾备机为RHEL或CENTOS 6.5 64位以上操作系统;
 
-瞬时恢复没有带宽控制选项；
+VMware平台，由于受到NFS挂载的限制，瞬时恢复的虚机只支持精简置备，不管源虚机是什么磁盘类型；
 
-Hyper-V平台不支持瞬时恢复；
+瞬时恢复没有带宽控制选项。
+
+Hyper-V平台，瞬时恢复，备机必须是hyperv平台，流程如下：
+
+1. 备机(hyperv平台)上安装i2node节点，无需做其他配置
+
+2. 控制机上节点管理中添加此节点
+
+3. 新建虚机备份，灾备机选择此节点，勾选'支持瞬时恢复'
+
+4. 新建瞬时恢复，选择备份点，提交
+
+5. 查看hyperv平台，瞬时恢复的目标虚机创建成功，是直接使用备份数据建立的虚机
+
+Hyper-V平台，瞬时恢复注意事项：
+
+普通恢复和瞬时恢复不能同时使用同一个备份点。
+
 
 ### 瞬时恢复基本设置 {#-0}
 
@@ -117,8 +134,9 @@ Hyper-V平台不支持瞬时恢复；
 
 ### 瞬时恢复高级设置 {#-0}
 
-![说明: 1](/assets/V7.020190109174438.png)
+![说明: 1](/assets/V7.120191108112454.png)
 
+* 删除目标虚机，勾选此选项，在停止规则或者删除规则时，会将目标虚机从ESXI平台取消注册，不勾选此选项，在停止规则或者删除规则时，不会将目标虚机从ESXI平台取消注册，需要手动取消注册，不可从ESXI平台直接删除，否则备份数据会被删除。
 
 瞬时恢复规则包含如下状态：
 
@@ -132,47 +150,31 @@ Hyper-V平台不支持瞬时恢复；
 *   “删除”：删除此虚机的规则；
 
 
-### 瞬时恢复环境搭建步骤 {#-4}
+### VMware平台瞬时恢复环境搭建步骤 {#-4}
 
 **灾备机是Centos6.5_64bit操作系统**
 
-* yum install fuse fuse\* fuse-\*
-* yum install nfs nfs\*
+灾备机端安装启动nfs服务
 * yum install rpcbind
+* yum install nfs-utils
+* yum install fuse-libs
 * /etc/init.d/rpcbind start
 * /etc/init.d/nfs start
-* 新建目录/root/disk/nfs，作为nfs共享的目录
-* chown -R nfsnobody:nfsnobody /root/disk/nfs
-* 修改/etc/exports文件如下：
 
-[root@localhost /]# cat /etc/exports
+rpcbind 一定要在 nfs 之前启动，否则 nfs 可能会起不来。
 
-/root/disk/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
+修改nfs共享目录，假设nfs的共享目录为/sdb1/nfs，修改/etc/exports文件如下：
 
-其中“/root/disk/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
+[root@localhost /]# vi /etc/exports
 
+/sdb1/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
+
+其中“/sdb1/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
+
+重启nfs服务
 * /etc/init.d/nfs restart
-* 新建目录/root/disk/tmp，用来存放新建的虚拟机
-* chown -R nfsnobody:nfsnobody /root/disk/tmp
-* 检查/usr/local/sdata/sbin目录下是否有fuse_start文件
-* 检查/usr/local/sdata/scripts目录下是否有fuse_script.sh文件
-* 修改/etc/sdata/system.conf文件(如果文件不存在，则新建system.conf文件)
 
-文件中存放三个变量：fuse_script, tmpdir, nfsdir三者缺一不可。
-
-[root@localhost sdata]# cat system.conf
-
-fuse_script=/usr/local/sdata/scripts/fuse_script.sh
-
-tmpdir=/root/disk/tmp
-
-nfsdir=/root/disk/nfs
-
-其中“fuse_script”表示的是脚本执行路径，“tmpdir”是实际存储的虚拟机的位置，“nfsdir”实际上是fuse将tmpdir映射到nfsdir，并且nfsdir目录是nfs目录，nfsdir路径中的目录需要与/etc/exports中的目录对应上。
-
-* service i2node restart
-
-* 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
+防火墙不能屏蔽对nfs的执行，否则esxi上无法挂载nfs存储。
 
 由于nfs服务需要开启 mountd, nfs, nlockmgr, portmapper, rquotad这5个服务，需要将这5个服务的端口加到iptables里面。而nfs和portmapper两个服务是固定端口的，nfs为2049，portmapper为111，其他的3个服务是用的随机端口，那就需要先把这3个服务的端口设置成固定的，用命令rpcinfo -p 查看当前这5个服务的端口，并记录下来。 
 
@@ -214,7 +216,7 @@ MOUNTD_PORT=42367
 
 ![说明: 1](/assets/20190404125335.png)
 
-重启防火墙：service iptables restart
+* 重启防火墙：service iptables restart
 
 * 重启i2node服务，service i2node restart
 
@@ -224,86 +226,23 @@ MOUNTD_PORT=42367
 
 ![说明: 1](/assets/20190404125356.png)
 
-* 页面上添加节点和虚拟平台
+页面上添加节点和虚拟平台
 
-* 新建虚机备份任务
+新建虚机备份任务，高级设置中勾选“支持瞬时恢复”，备份路径必须选择nfs共享目录/sdb1/nfs或者nfs共享目录的子目录/sdb1/nfs/temp
 
 ![说明: 1](/assets/V7.120190404153244.png)
 
-* 新建瞬时恢复任务
+新建瞬时恢复任务
 
 ![说明: 1](/assets/V7.120190404153310.png)
 
-* 灾备机：
-
-![说明: 1](/assets/20190404125302.png)
-
-* esxi平台：
-
-![说明: 1](/assets/esxi-platform.png)
-
-**注意**
-
-如果执行df -h命令后，结果没有出现fuse_start那一行，可能需要手动启动一下fuse
-
-先执行cd /usr/local/sdata/scripts
-
-然后执行./fuse_script.sh 0 /root/disk/tmp/ /root/disk/nfs
-
-执行结果中出现:
-
-fuse: mountpoint is not empty
-
-fuse: if you are sure this is safe, use the 'nonempty' mount option
-
-fuse_main returned 1
-
-说明用fuse_script.sh没有启动fuse
-
-此时执行/usr/local/sdata/sbin/fuse_start -o nonempty /root/disk/tmp /root/disk/nfs
-
-再执行df -h命令，应该会出现fuse_start那一行
 
 
 **灾备机是Centos7.0_64bit操作系统**
 
-* yum install fuse fuse\* fuse-\*
-* yum install nfs nfs\*
-* yum install rpcbind
-* systemctl start rpcbind
-* systemctl start nfs 
-* 新建目录/root/disk/nfs，作为nfs共享的目录
-* chown -R nfsnobody:nfsnobody /root/disk/nfs
-* 修改/etc/exports文件如下：
+灾备机是Centos7时，只有防火墙这一步与Centos6.5不一样，差异如下：
 
-[root@localhost /]# cat /etc/exports
-
-/root/disk/nfs 192.168.0.0/16(rw,no_root_squash,nohide,sync,fsid=0,anonuid=501,anongid=501)
-
-其中“/root/disk/nfs”是nfs共享的目录, “192.168.0.0/16” 有权共享本目录的IP网段，“rw”表示来访者对所共享出去的目录享有读和写的权力，"no_root_squash"表示如果来访者是该机的 root 则在本机也给予 root 待遇，“nohide”表示共享NFS目录的子目录，“sync”表示资料同步写入到内存与硬盘中。
-
-* systemctl restart nfs
-* 新建目录/root/disk/tmp，用来存放新建的虚拟机
-* chown -R nfsnobody:nfsnobody /root/disk/tmp
-* 检查/usr/local/sdata/sbin目录下是否有fuse_start文件
-* 检查/usr/local/sdata/scripts目录下是否有fuse_script.sh文件
-* 修改/etc/sdata/system.conf文件(如果文件不存在，则新建system.conf文件)
-
-文件中存放三个变量：fuse_script, tmpdir, nfsdir三者缺一不可。
-
-[root@localhost sdata]# cat system.conf
-
-fuse_script=/usr/local/sdata/scripts/fuse_script.sh
-
-tmpdir=/root/disk/tmp
-
-nfsdir=/root/disk/nfs
-
-其中“fuse_script”表示的是脚本执行路径，“tmpdir”是实际存储的虚拟机的位置，“nfsdir”实际上是fuse将tmpdir映射到nfsdir，并且nfsdir目录是nfs目录，nfsdir路径中的目录需要与/etc/exports中的目录对应上。
-
-* service i2node restart
-
-* 防火墙不能屏蔽对fuse和nfs的执行，否则esxi上无法挂载nfs存储。
+防火墙不能屏蔽对nfs的执行，否则esxi上无法挂载nfs存储。
 
 由于nfs服务需要开启 mountd, nfs, nlockmgr, portmapper, rquotad这5个服务，需要将这5个服务的端口加到iptables里面。而nfs和portmapper两个服务是固定端口的，nfs为2049，portmapper为111，其他的3个服务是用的随机端口，那就需要先把这3个服务的端口设置成固定的，用命令rpcinfo -p 查看当前这5个服务的端口，并记录下来。  
 
@@ -373,8 +312,3 @@ public (default, active)
 	
 [root@localhost zones]#
 
-* 页面上添加节点和虚拟平台
-
-* 新建虚机备份任务
-
-* 新建瞬时恢复任务
